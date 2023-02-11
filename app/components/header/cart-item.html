@@ -1,0 +1,31 @@
+<div class="cart-item" data-cart="item">
+  <div class="cart-item__left">
+    <div class="cart-item__image">
+      <img src="@img//content//cart/@@image" alt="cart-item-image">
+    </div>
+    <div class="cart-item__info">
+      <h6 class="cart-item__info-title">Анатомический матрас Askona Benefit</h6>
+      <div class="cart-item__info-buttons">
+        <button class="cart-item__info-buttonsItem cart-item__info-buttonsItem--add" type="button">Добавить в избраноое</button>
+        <button class="cart-item__info-buttonsItem cart-item__info-buttonsItem--remove" type="button">Удалить</button>
+      </div>
+    </div>
+  </div>
+  <div class="cart-item__product">
+    <div class="cart-item__product-price cart-item__product-price--actual">48 900 BYN</div>
+    <div class="cart-item__product-price cart-item__product-price--old">97 800 BYN</div>
+    <div class="cart-item__product-counter">
+      <button class="cart-item__product-counterDecrement" data-cart="decrement" type="button">
+        <svg class="cart-item__product-icon" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1H11" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <input class="cart-item__product-counterInput" type="text" value="1" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onFocus="this.select()" maxlength="3" data-cart="counter">
+      <button class="cart-item__product-counterIncrement" data-cart="increment" type="button">
+        <svg class="cart-item__product-icon" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 0V10M0 4.73684H10" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

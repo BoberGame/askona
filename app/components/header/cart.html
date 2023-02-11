@@ -1,0 +1,130 @@
+<div class="cart popup" id="cart">
+  <div class="popup__overlay"></div>
+  <div class="cart-box popup__box">
+    <div class="popup__header">
+      <h3 class="popup__title">В корзине 2 товара</h3>
+      <button class="popup__close">
+        <img src="@img//icons/close.svg" alt="close">
+      </button>
+    </div>
+    <div class="cart__wrapper">
+      <div class="cart__products">
+        @@include('./cart-item.html', {"image": "item-1.jpg"})
+        @@include('./cart-item.html', {"image": "item-1.jpg"})
+        @@include('./cart-item.html', {"image": "item-2.jpg"})
+        @@include('./cart-item.html', {"image": "item-3.jpg"})
+      </div>
+      <div class="cart__total">
+        <div class="cart__total-head">
+          <div class="cart__total-head__title">Итого:</div>
+          <div class="cart__total-head__price">127 BYN</div>
+        </div>
+        <p class="cart__total-description">
+          <img src="@img//icons/total.svg" alt="total-description">
+          Будет начисленно <span>+ 289</span> за этот заказ
+        </p>
+        <div class="cart__total-buttons">
+          <button class="cart__total-buttonsBuy cart__total-buttonsBuy--white btn btn--accent" type="button">Купить в 1 клик</button>
+          <button class="cart__total-buttonsBuy btn btn--accent" type="button">Оформить заказ</button>
+        </div>
+      </div>
+      <div class="cart__more splide" id="cart-more-slider">
+        <div class="cart__more-head">
+          <div class="cart__more-title">С этим товаром покупают</div>
+          <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev" type="button">
+              <img src="@img//icons/slider-arrow-left.svg" alt="slider-arrow">
+            </button>
+            <button class="splide__arrow splide__arrow--next" type="button">
+              <img src="@img//icons/slider-arrow-right.svg" alt="slider-arrow">
+            </button>
+          </div>
+        </div>
+        <div class="splide__track">
+          <div class="splide__list">
+            <div class="cart__more-item splide__slide">
+              <div class="cart__more-image">
+                <img src="@img//content/cart/cart-more-1.jpg" alt="cart-image">
+              </div>
+              <a href="#" class="product-card__title">Анатомический матрас</a>
+              <div class="product-card__price">
+                от
+                <span class="product-card__price--actual">48 900 BYN</span>
+                <span class="product-card__price--old">97 800 BYN</span>
+              </div>
+              <div class="product-card__colors">
+                <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
+                <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
+                <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
+                <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
+                <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
+                <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
+                <span class="product-card__colors-more">+ 12</span>
+              </div>
+            </div>
+            <div class="cart__more-item splide__slide">
+              <div class="cart__more-image">
+                <img src="@img//content/cart/cart-more-2.jpg" alt="cart-image">
+              </div>
+              <a href="#" class="product-card__title">Анатомический матрас</a>
+              <div class="product-card__price">
+                от
+                <span class="product-card__price--actual">48 900 BYN</span>
+                <span class="product-card__price--old">97 800 BYN</span>
+              </div>
+              <div class="product-card__colors">
+                <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
+                <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
+                <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
+                <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
+                <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
+                <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
+                <span class="product-card__colors-more">+ 12</span>
+              </div>
+            </div>
+            <div class="cart__more-item splide__slide">
+              <div class="cart__more-image">
+                <img src="@img//content/cart/cart-more-1.jpg" alt="cart-image">
+              </div>
+              <a href="#" class="product-card__title">Анатомический матрас</a>
+              <div class="product-card__price">
+                от
+                <span class="product-card__price--actual">48 900 BYN</span>
+                <span class="product-card__price--old">97 800 BYN</span>
+              </div>
+              <div class="product-card__colors">
+                <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
+                <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
+                <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
+                <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
+                <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
+                <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
+                <span class="product-card__colors-more">+ 12</span>
+              </div>
+            </div>
+            <div class="cart__more-item splide__slide">
+              <div class="cart__more-image">
+                <img src="@img//content/cart/cart-more-2.jpg" alt="cart-image">
+              </div>
+              <a href="#" class="product-card__title">Анатомический матрас</a>
+              <div class="product-card__price">
+                от
+                <span class="product-card__price--actual">48 900 BYN</span>
+                <span class="product-card__price--old">97 800 BYN</span>
+              </div>
+              <div class="product-card__colors">
+                <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
+                <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
+                <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
+                <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
+                <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
+                <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
+                <span class="product-card__colors-more">+ 12</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
