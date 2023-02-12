@@ -20,6 +20,10 @@
       }
     }
 
+    & .arrow-down__icon {
+      margin-left: 8px;
+    }
+
     &-box {
       display: flex;
       justify-content: center;
@@ -33,6 +37,17 @@
 
       @media (max-width: 768px) {
         display: none;
+      }
+    }
+
+    &-icon {
+      width: 20px;
+      height: 20px;
+      color: #231f20;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $accent;
       }
     }
 
@@ -52,21 +67,6 @@
 
     &-buttons__item {
       position: relative;
-
-      svg {
-        width: 20px;
-        height: 20px;
-        fill: #231f20;
-        color: #231f20;
-        transition: fill 0.3s;
-      }
-
-      &:hover {
-        svg {
-          color: $accent;
-          fill: $accent;
-        }
-      }
 
       span {
         position: absolute;
@@ -164,15 +164,15 @@
       svg {
         margin-right: 10px;
         height: 18px;
-        fill: #7e7e7e;
-        transition: fill 0.2s;
+        color: #7e7e7e;
+        transition: color 0.2s;
       }
 
       &:hover {
         border-color: #d4d4d4;
 
         svg {
-          fill: #323232;
+          color: #323232;
         }
       }
 
@@ -240,28 +240,28 @@
       transform: translateY(-50%);
       left: 3.5%;
 
-      img {
-        width: 16px;
-        height: 16px;
-      }
-
       @media (max-width: 1024px) {
-        img {
-          width: 12px;
-          height: 12px;
-        }
         left: 2.5%;
-      }
-
-      @media (max-width: 768px) {
-        img {
-          width: 16px;
-          height: 16px;
-        }
       }
 
       @media (max-width: 580px) {
         left: 3.5%;
+      }
+    }
+
+    &-search__icon {
+      width: 16px;
+      height: 16px;
+      color: $accent;
+
+      @media (max-width: 1024px) {
+        width: 12px;
+        height: 12px;
+      }
+
+      @media (max-width: 768px) {
+        width: 16px;
+        height: 16px;
       }
     }
 
@@ -292,11 +292,6 @@
       &:hover {
         border-color: #eee;
       }
-    }
-
-    &-arrowIcon {
-      margin-left: 8px;
-      width: 9px;
     }
 
     &-city {

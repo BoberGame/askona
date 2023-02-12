@@ -1,39 +1,4 @@
 .cart {
-
-  &-box {
-    overflow-x: auto;
-    // padding-bottom: 32px;
-    transition: transform 0.3s;
-    overflow-y: auto;
-    overflow-x: hidden;
-
-    &::-webkit-scrollbar {
-      width: 2px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background-color: #eeeeee;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: $accent;
-    }
-  }
-
-  &__head {
-    padding: 32px;
-    padding-bottom: 36px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #eeeeee;
-    margin-bottom: 7px;
-
-    @media (max-width: 1200px) {
-      padding: 20px;
-    }
-  }
-
   &__wrapper {
     padding-left: 32px;
 
@@ -99,10 +64,11 @@
         font-weight: 700;
       }
 
-      img {
+      svg {
         width: 25px;
         height: 25px;
         margin-right: 0.6em;
+        color: $accent;
 
         @media (max-width: 1024px) {
           width: 16px;
@@ -169,37 +135,8 @@
   }
 
   .splide__arrow {
-    padding-right: 3px;
     position: static;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-
-    border: 1px solid #d8d8d8;
-    opacity: 1;
-    background-color: #fff;
-    transition: border-color 0.3s;
     transform: none;
-
-    &:hover {
-      border-color: #aaa;
-    }
-
-    &--next {
-      padding-right: 0;
-      padding-left: 3px;
-    }
-
-    @media (max-width: 1440px) {
-      padding-right: 3px;
-      width: 32px;
-      height: 32px;
-
-      &--next {
-        padding-left: 3px;
-        padding-right: 0;
-      }
-    }
   }
 
   .splide__track {
@@ -393,8 +330,8 @@
     &__product-icon {
       width: 10px;
       height: 10px;
-      stroke: $accent;
-      transition: fill 0.2s;
+      color: $accent;
+      transition: color 0.2s;
 
       &:hover {
         stroke: #00bac098;

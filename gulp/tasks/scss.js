@@ -36,6 +36,7 @@ export const scss = () => {
         '.benefits',
         '.sale',
         '.products',
+        '.arrow',
       ],
     }),
   ];

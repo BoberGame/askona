@@ -29,10 +29,26 @@
   position: fixed;
   z-index: 110;
   height: 100%;
-  overflow-x: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-bottom: 32px;
   transition: transform 0.3s;
-  overflow: hidden;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #eeeeee;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $accent;
+  }
+
+  /* Firefox */
+  scrollbar-color: $accent #eeeeee;
+  scrollbar-width: thin;
 
   @media (max-width: 1200px) {
     max-width: 40%;
@@ -80,14 +96,15 @@
 
 .popup__close {
   padding: 0;
+}
 
-  img {
-    width: 13px;
-    height: 13px;
+.popup__close-icon {
+  width: 14px;
+  height: 14px;
+  color: $accent;
 
-    @media (max-width: 1440px) {
-      width: 13px;
-      height: 13px;
-    }
+  @media (max-width: 1440px) {
+    width: 14px;
+    height: 14px;
   }
 }

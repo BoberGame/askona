@@ -22,7 +22,9 @@
           <button class="header__top-country" type="button">
             <img class="header__top-countryFlag" src="@img//icons/rus.svg" alt="rus">
             <span class="header__top-countryToggler">
-              <img class="header__top-arrowIcon" src="@img//icons/angle-down.svg" alt="Arrow down">
+              <svg class="arrow-down__icon">
+                <use href="images/icons/icons.svg#angle-down" />
+              </svg>
             </span>
           </button>
           <div class="header__top-countryList">
@@ -36,20 +38,22 @@
         </div>
         <button class="header__top-city" type="button">
           Минск
-          <img class="header__top-arrowIcon" src="@img//icons/angle-down.svg" alt="Arrow down">
+          <svg class="arrow-down__icon">
+            <use href="images/icons/icons.svg#angle-down" />
+          </svg>
         </button>
         <div class="header__top-shop">Магазины: <span>30</span></div>
         <div class="header__top-search">
           <button class="header__top-searchButton" type="button">
-            <img src="@img//icons/search.svg" alt="search">
+            <svg class="header__top-search__icon">
+              <use href="images/icons/icons.svg#search" />
+            </svg>
           </button>
           <input type="text" placeholder="Поиск по товарам..." class="header__top-searchField">
         </div>
         <a href="tel:+79991043195" class="header__top-call">
-          <svg viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.8123 11.6993C14.4235 11.3111 13.8964 11.0929 13.3469 11.0929C12.7974 11.0929 12.2703 11.3111 11.8815 11.6993L11.0704 12.5467C8.58902 11.4237 6.59839 9.44063 5.4667 6.96423L6.2317 6.19957C6.43667 6.00893 6.60146 5.77917 6.71638 5.52397C6.8313 5.26878 6.89402 4.9932 6.90089 4.71344C6.90776 4.43367 6.85863 4.15532 6.75637 3.8948C6.65412 3.63429 6.50079 3.39718 6.30542 3.19672L5.22709 2.10955C4.75055 1.63646 4.10613 1.37099 3.43446 1.37099C2.76279 1.37099 2.11837 1.63646 1.64183 2.10955L1.04275 2.70824C0.629554 3.13322 0.325003 3.65142 0.15493 4.21911C-0.0151429 4.7868 -0.0457181 5.38726 0.0657962 5.96928C0.768378 8.87342 2.25846 11.5279 4.37226 13.6406C6.48606 15.7533 9.14174 17.2425 12.0474 17.9447C12.282 17.9841 12.5192 18.0054 12.757 18.009C13.7124 18.014 14.6308 17.6397 15.31 16.9682L15.9091 16.3695C16.1457 16.1349 16.3335 15.8557 16.4616 15.5482C16.5898 15.2407 16.6557 14.9111 16.6557 14.578C16.6557 14.2449 16.5898 13.9148 16.4616 13.6073C16.3335 13.2998 16.1457 13.0206 15.9091 12.786L14.8123 11.6993ZM14.9137 15.384L14.3146 15.9827C14.0512 16.24 13.7284 16.4282 13.3747 16.531C13.021 16.6338 12.6474 16.6479 12.287 16.5719C9.6598 15.9215 7.25975 14.5676 5.34508 12.6555C3.43042 10.7435 2.07361 8.34584 1.42064 5.72054C1.34825 5.35951 1.36497 4.98649 1.46935 4.63337C1.57374 4.28025 1.76263 3.95748 2.01971 3.69374L2.61878 3.08607C2.7255 2.98018 2.85209 2.89648 2.99126 2.83958C3.13044 2.78267 3.27947 2.75334 3.42985 2.75412C3.73596 2.7541 4.03011 2.87334 4.25014 3.08607L5.32846 4.17278C5.39474 4.24555 5.44557 4.33126 5.47787 4.42422C5.51017 4.51718 5.52327 4.61572 5.51638 4.71389C5.50948 4.81205 5.48273 4.90792 5.43776 4.99546C5.39279 5.083 5.33054 5.16026 5.25474 5.22306L4.48975 5.98772C4.29622 6.1819 4.16486 6.42939 4.11234 6.6984C4.05982 6.96741 4.08854 7.24593 4.19484 7.49859C5.46104 10.3028 7.70987 12.5469 10.5174 13.8084C10.7665 13.9142 11.0415 13.9438 11.3074 13.8929C11.5733 13.8421 11.8181 13.7135 12.0105 13.5232L12.8584 12.6753C12.988 12.5459 13.1637 12.4734 13.3469 12.4734C13.5301 12.4734 13.7058 12.5459 13.8354 12.6753L14.9137 13.7535C15.0221 13.8598 15.1082 13.9864 15.167 14.1264C15.2258 14.2663 15.2561 14.4167 15.2561 14.5685C15.2561 14.7203 15.2258 14.8707 15.167 15.0107C15.1082 15.1507 15.0221 15.2777 14.9137 15.384Z" />
-            <path d="M12.0474 5.96931C12.3291 6.24639 12.5512 6.57812 12.7002 6.94403C12.8492 7.30993 12.9218 7.70235 12.9137 8.09731C12.9125 8.18804 12.9292 8.27795 12.9628 8.36224C12.9964 8.44653 13.0463 8.52348 13.1097 8.58849C13.173 8.6535 13.2485 8.70559 13.3319 8.74142C13.4153 8.77726 13.505 8.79599 13.5957 8.7972C13.7775 8.79721 13.9519 8.72597 14.0813 8.59839C14.2107 8.4708 14.2846 8.29739 14.287 8.11575C14.2957 7.53631 14.1879 6.9611 13.9701 6.42406C13.7522 5.88702 13.4287 5.39897 13.0187 4.9892C12.6087 4.57943 12.1206 4.25607 11.5833 4.03833C11.046 3.82059 10.4704 3.71297 9.89069 3.72167C9.79991 3.72287 9.71026 3.74206 9.62686 3.7779C9.54345 3.81373 9.4679 3.86537 9.40457 3.93038C9.34124 3.99539 9.29134 4.07234 9.25772 4.15663C9.2241 4.24092 9.20742 4.33083 9.20864 4.42156C9.2045 4.51376 9.21996 4.60607 9.25395 4.69189C9.28794 4.7777 9.3397 4.8551 9.40586 4.91948C9.47202 4.98387 9.55106 5.03355 9.6378 5.06522C9.72453 5.09689 9.817 5.11004 9.90911 5.10345C10.7072 5.10413 11.4739 5.41454 12.0474 5.96931Z" />
-            <path d="M15.6326 2.37674C14.8828 1.62249 13.9911 1.02415 13.0087 0.616229C12.0263 0.208307 10.9729 -0.00119112 9.9091 5.09389e-06C9.72577 5.09389e-06 9.54995 0.0728473 9.42031 0.202414C9.29068 0.331982 9.21786 0.50766 9.21786 0.690896C9.21786 0.874131 9.29068 1.04981 9.42031 1.17938C9.54995 1.30894 9.72577 1.38179 9.9091 1.38179C11.6895 1.38423 13.3961 2.09278 14.6541 3.3519C15.9122 4.61103 16.6188 6.31782 16.6188 8.09728C16.6188 8.28051 16.6916 8.45619 16.8212 8.58576C16.9509 8.71533 17.1267 8.78817 17.31 8.78817C17.4933 8.78817 17.6692 8.71533 17.7988 8.58576C17.9284 8.45619 18.0013 8.28051 18.0013 8.09728C18.0052 7.03448 17.7978 5.98155 17.3912 4.99952C16.9846 4.01748 16.3868 3.12595 15.6326 2.37674Z" />
+          <svg class="header__top-search__icon">
+            <use href="images/icons/icons.svg#menu-call" />
           </svg>
           <span>Перезвоните мне</span>
         </a>
@@ -64,36 +68,27 @@
       </div>
       <div class="header__top-buttons">
         <a href="#" class="header__top-buttons__item">
-          <svg class="header__icon">
-              <use href="images/icons/icons.svg#personal-account"/>
-          </svg>
-          <!-- <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 9.70754C10.9595 9.70754 11.8974 9.42288 12.6952 8.88954C13.493 8.3562 14.1148 7.59814 14.482 6.71123C14.8492 5.82432 14.9453 4.84839 14.7581 3.90685C14.5709 2.96531 14.1088 2.10045 13.4304 1.42164C12.7519 0.742827 11.8875 0.28055 10.9464 0.0932661C10.0054 -0.0940178 9.02995 0.00210296 8.14349 0.369473C7.25704 0.736844 6.49937 1.35896 5.96631 2.15716C5.43324 2.95536 5.14872 3.89379 5.14872 4.85377C5.15143 6.14024 5.66341 7.37324 6.57262 8.28291C7.48182 9.19258 8.71419 9.70483 10 9.70754ZM10 1.49821C10.6552 1.49821 11.2957 1.6926 11.8405 2.0568C12.3853 2.42101 12.8099 2.93866 13.0606 3.54431C13.3114 4.14996 13.377 4.8164 13.2492 5.45936C13.1213 6.10231 12.8058 6.6929 12.3425 7.15645C11.8792 7.61999 11.2889 7.93567 10.6463 8.06356C10.0037 8.19145 9.33758 8.12581 8.73224 7.87494C8.1269 7.62407 7.60951 7.19924 7.24549 6.65418C6.88147 6.10911 6.68718 5.46828 6.68718 4.81273C6.70061 3.94164 7.05524 3.11062 7.67478 2.49844C8.29431 1.88626 9.12926 1.54184 10 1.53925V1.49821Z" />
-            <path d="M10 11.2878C5.08718 11.2878 0 13.4941 0 17.178V18.2042C0 18.6805 0.189102 19.1372 0.525706 19.474C0.862309 19.8108 1.31884 20 1.79487 20H18.2051C18.6812 20 19.1377 19.8108 19.4743 19.474C19.8109 19.1372 20 18.6805 20 18.2042V17.178C20 13.4633 14.9231 11.2878 10 11.2878ZM18.4615 18.2042C18.4615 18.2722 18.4345 18.3375 18.3864 18.3856C18.3384 18.4337 18.2731 18.4607 18.2051 18.4607H1.79487C1.72687 18.4607 1.66165 18.4337 1.61356 18.3856C1.56548 18.3375 1.53846 18.2722 1.53846 18.2042V17.178C1.53846 14.5818 5.91795 12.8271 10 12.8271C14.0821 12.8271 18.4615 14.5818 18.4615 17.178V18.2042Z" />
-          </svg> -->
-        </a>
-        <a href="#" class="header__top-buttons__item">
-          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.92315 20C6.82175 20.0014 6.72112 19.9823 6.62717 19.9442C6.53322 19.906 6.44785 19.8493 6.37615 19.7776C6.30444 19.7059 6.24786 19.6207 6.20969 19.5267C6.17152 19.4328 6.15254 19.3322 6.15392 19.2308V11.0256C6.15392 10.8216 6.23496 10.6258 6.37921 10.4815C6.52347 10.3373 6.71913 10.2564 6.92315 10.2564C7.12716 10.2564 7.32282 10.3373 7.46708 10.4815C7.61134 10.6258 7.69238 10.8216 7.69238 11.0256V19.2308C7.69238 19.4348 7.61134 19.6304 7.46708 19.7746C7.32282 19.9189 7.12716 20 6.92315 20Z" />
-            <path d="M19.2308 20C19.1294 20.0014 19.0288 19.9823 18.9349 19.9442C18.8409 19.906 18.7555 19.8493 18.6838 19.7776C18.6121 19.7059 18.5556 19.6207 18.5174 19.5267C18.4792 19.4328 18.4602 19.3322 18.4616 19.2308V5.89744C18.4616 5.69342 18.5426 5.49757 18.6869 5.35332C18.8312 5.20906 19.0268 5.12821 19.2308 5.12821C19.4349 5.12821 19.6305 5.20906 19.7748 5.35332C19.919 5.49757 20.0001 5.69342 20.0001 5.89744V19.2308C20.0001 19.4348 19.919 19.6304 19.7748 19.7746C19.6305 19.9189 19.4349 20 19.2308 20Z" />
-            <path d="M13.077 20C12.9756 20.0014 12.875 19.9823 12.781 19.9442C12.6871 19.906 12.6017 19.8494 12.53 19.7776C12.4583 19.7059 12.4017 19.6207 12.3635 19.5267C12.3254 19.4328 12.3064 19.3322 12.3078 19.2308V0.769231C12.3078 0.565218 12.3888 0.369369 12.5331 0.22511C12.6773 0.0808514 12.873 0 13.077 0C13.281 0 13.4767 0.0808514 13.6209 0.22511C13.7652 0.369369 13.8462 0.565218 13.8462 0.769231V19.2308C13.8462 19.4348 13.7652 19.6304 13.6209 19.7746C13.4767 19.9189 13.281 20 13.077 20Z" />
-            <path d="M0.769301 20C0.667902 20.0014 0.567278 19.9823 0.473327 19.9442C0.379377 19.906 0.294007 19.8493 0.222301 19.7776C0.150594 19.7059 0.0940158 19.6207 0.0558469 19.5267C0.017678 19.4328 -0.00130962 19.3322 7.01493e-05 19.2308V5.89744C7.01493e-05 5.69342 0.0811094 5.49757 0.225368 5.35332C0.369627 5.20906 0.565288 5.12821 0.769301 5.12821C0.973314 5.12821 1.16898 5.20906 1.31323 5.35332C1.45749 5.49757 1.53853 5.69342 1.53853 5.89744V19.2308C1.53853 19.4348 1.45749 19.6304 1.31323 19.7746C1.16898 19.9189 0.973314 20 0.769301 20Z" />
+          <svg class="header__top-icon">
+            <use href="images/icons/icons.svg#personal-account" />
           </svg>
         </a>
         <a href="#" class="header__top-buttons__item">
-          <svg viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 6.68605C20 3.45643 17.4974 0.000536141 13.7846 0.000536141C12.3887 -0.0173342 11.0373 0.493162 10 1.43021C8.95959 0.491617 7.60444 -0.0189168 6.20513 0.000536141C2.49231 0.000536141 0 3.45643 0 6.68605C0 12.3019 7.67179 17.064 9.58974 17.8663C9.71193 17.9472 9.85371 17.9934 10 18C10.1398 17.9928 10.2749 17.9465 10.3897 17.8663C12.3282 17.064 20 12.3019 20 6.68605ZM10 16.3749C8.33846 15.5418 1.53846 11.3042 1.53846 6.68605C1.53846 4.20727 3.41538 1.54335 6.20513 1.54335C6.81728 1.53599 7.42332 1.66611 7.97881 1.92417C8.5343 2.18223 9.02515 2.56169 9.41539 3.03473L9.53846 3.10673L9.62051 3.15816C9.71605 3.19342 9.8163 3.21422 9.91795 3.21987C10.0163 3.21413 10.1131 3.19331 10.2051 3.15816L10.2872 3.10673C10.3315 3.08898 10.373 3.06471 10.4103 3.03473H10.4615C10.8517 2.56493 11.3413 2.18823 11.8949 1.93203C12.4484 1.67583 13.0519 1.54656 13.6615 1.55363C16.4615 1.55363 18.3385 4.21755 18.3385 6.69634C18.4615 11.3042 11.6513 15.5418 10 16.3749Z" />
+          <svg class="header__top-icon">
+            <use href="images/icons/icons.svg#comparision" />
+          </svg>
+        </a>
+        <a href="#" class="header__top-buttons__item">
+          <svg class="header__top-icon">
+            <use href="images/icons/icons.svg#favourite" />
           </svg>
           <span class="header__top-buttons__item-counter">14</span>
         </a>
-        <a href="#" data-opener data-popup="cart" class="header__top-buttons__item">
-          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19.5343 4.04627C19.3466 3.82163 19.1123 3.64016 18.8475 3.51435C18.5828 3.38853 18.2938 3.32135 18.0004 3.31742H4.43916L3.83982 0.614595C3.83422 0.591305 3.83422 0.567024 3.83982 0.543735C3.82037 0.491249 3.79659 0.440461 3.76872 0.391891C3.7442 0.344198 3.71346 0.299949 3.67729 0.260294C3.6451 0.221392 3.60747 0.1873 3.56555 0.159064C3.52244 0.119701 3.47468 0.0857083 3.42334 0.0578348L3.29128 0.0072209C3.23412 -0.00240697 3.17575 -0.00240697 3.11859 0.0072209H0.843136C0.619522 0.0072209 0.405067 0.0957418 0.246949 0.25331C0.0888299 0.410879 0 0.624588 0 0.847424C0 1.07026 0.0888299 1.28397 0.246949 1.44154C0.405067 1.59911 0.619522 1.68763 0.843136 1.68763H2.3364L2.93574 4.39045L4.9166 13.5922C5.03693 14.0198 5.29503 14.3962 5.65114 14.6633C6.00726 14.9303 6.44162 15.0733 6.8873 15.0701H16.3548C16.804 15.0687 17.2393 14.9144 17.5885 14.6327C17.9377 14.351 18.1798 13.9589 18.2747 13.5213L19.9712 5.67606C20.0202 5.38908 20.0066 5.09493 19.9312 4.81367C19.8558 4.53241 19.7205 4.27066 19.5343 4.04627ZM16.5884 13.1569C16.5747 13.2194 16.5401 13.2755 16.4903 13.3159C16.4405 13.3564 16.3784 13.3788 16.3142 13.3796H6.8873C6.82256 13.3807 6.75951 13.359 6.70932 13.3182C6.65912 13.2775 6.62501 13.2203 6.61303 13.1569L4.85565 5.00794H18.0614C18.104 5.00636 18.1463 5.01468 18.1851 5.03225C18.2239 5.04982 18.2581 5.07616 18.2849 5.10917C18.3111 5.14127 18.3294 5.17908 18.3382 5.21953C18.3471 5.25999 18.3462 5.30195 18.3357 5.342L16.5884 13.1569Z" />
-            <path d="M16.7002 17.4794C16.3626 17.4783 16.038 17.6091 15.7961 17.8438C15.5631 18.0824 15.432 18.4017 15.4304 18.7346C15.4304 19.0702 15.5642 19.3921 15.8023 19.6294C16.0404 19.8667 16.3634 20 16.7002 20C17.0352 19.9973 17.3556 19.8628 17.5915 19.6258C17.8274 19.3888 17.9598 19.0685 17.9598 18.7346C17.9598 18.5698 17.9272 18.4066 17.8639 18.2543C17.8006 18.102 17.7078 17.9636 17.5909 17.847C17.4739 17.7305 17.3351 17.638 17.1822 17.5749C17.0294 17.5119 16.8656 17.4794 16.7002 17.4794Z" />
-            <path d="M7.0092 17.4794C6.67469 17.4788 6.35345 17.6097 6.11528 17.8438C5.99759 17.9603 5.90458 18.0992 5.84176 18.2523C5.77894 18.4053 5.74759 18.5693 5.74958 18.7346C5.74957 19.0685 5.88195 19.3888 6.11789 19.6258C6.35383 19.8628 6.6742 19.9973 7.0092 20C7.34597 20 7.66894 19.8667 7.90707 19.6294C8.14521 19.3921 8.27899 19.0702 8.27899 18.7346C8.27899 18.5689 8.24608 18.4049 8.18214 18.2519C8.11821 18.099 8.02451 17.9601 7.90647 17.8434C7.78842 17.7268 7.64836 17.6345 7.49436 17.572C7.34036 17.5095 7.17547 17.4781 7.0092 17.4794Z" />
+        <button type="button" data-opener data-popup="cart" class="header__top-buttons__item">
+          <svg class="header__top-icon">
+            <use href="images/icons/icons.svg#cart" />
           </svg>
           <span class="header__top-buttons__item-counter">2</span>
-        </a>
+        </button>
       </div>
       <a href="tel:79991043195" class="header-mobile__call">
         <img src="@img//icons/call-mobile.svg" alt="call">
@@ -101,7 +96,9 @@
     </div>
     <div class="header__top-search header__top-search--mobile">
       <button class="header__top-searchButton" type="button">
-        <img src="@img//icons/search.svg" alt="search">
+        <svg class="header__top-search__icon">
+          <use href="images/icons/icons.svg#search" />
+        </svg>
       </button>
       <input type="text" placeholder="Поиск по товарам..." class="header__top-searchField">
     </div>
@@ -153,7 +150,9 @@
               </div>
               <h6 class="header-mobile__title header-mobile__title--grey">Ваш город:<b>Минск</b></h6>
             </div>
-            <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+            <svg class="header-mobile__arrow arrow-down__icon">
+              <use href="images/icons/icons.svg#angle-down" />
+            </svg>
           </a>
         </div>
         <div class="header-mobile__wrapper">
@@ -164,7 +163,9 @@
               </div>
               <h6 class="header-mobile__title">Матрасы</h6>
             </div>
-            <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+            <svg class="header-mobile__arrow arrow-down__icon">
+              <use href="images/icons/icons.svg#angle-down" />
+            </svg>
           </a>
           <div class="header-mobile-submenu">
             <div class="header-mobile__wrapper">
@@ -175,12 +176,16 @@
                   </div>
                   <h6 class="header-mobile__title header-mobile__title--grey">Ваш город:<b>Минск</b></h6>
                 </div>
-                <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+                <svg class="header-mobile__arrow arrow-down__icon">
+                  <use href="images/icons/icons.svg#angle-down" />
+                </svg>
               </a>
             </div>
             <div class="header-mobile__wrapper">
               <a href="#" class="header-mobile__link header-mobile__link--sm header-mobile__link--back">
-                <img class="header-mobile__arrow header-mobile__arrow--back" src="@img//icons/angle-down.svg" alt="arrow">
+                <svg class="header-mobile__arrow header-mobile__arrow--back arrow-down__icon">
+                  <use href="images/icons/icons.svg#angle-down" />
+                </svg>
                 <div class="header-mobile__link-box">
                   <h6 class="header-mobile__title">Назад</h6>
                 </div>
@@ -191,7 +196,9 @@
                 <div class="header-mobile__link-box">
                   <h6 class="header-mobile__title">Все матрасы</h6>
                 </div>
-                <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+                <svg class="header-mobile__arrow arrow-down__icon">
+                  <use href="images/icons/icons.svg#angle-down" />
+                </svg>
               </a>
             </div>
             <div class="header-mobile__wrapper">
@@ -199,7 +206,9 @@
                 <div class="header-mobile__link-box">
                   <h6 class="header-mobile__title">Американские матрасы</h6>
                 </div>
-                <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+                <svg class="header-mobile__arrow arrow-down__icon">
+                  <use href="images/icons/icons.svg#angle-down" />
+                </svg>
               </a>
             </div>
             <div class="header-mobile__wrapper">
@@ -207,7 +216,9 @@
                 <div class="header-mobile__link-box">
                   <h6 class="header-mobile__title">Чехлы на матрас</h6>
                 </div>
-                <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+                <svg class="header-mobile__arrow arrow-down__icon">
+                  <use href="images/icons/icons.svg#angle-down" />
+                </svg>
               </a>
             </div>
             <div class="header-mobile__wrapper">
@@ -215,7 +226,9 @@
                 <div class="header-mobile__link-box">
                   <h6 class="header-mobile__title">Наматрасники</h6>
                 </div>
-                <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+                <svg class="header-mobile__arrow arrow-down__icon">
+                  <use href="images/icons/icons.svg#angle-down" />
+                </svg>
               </a>
             </div>
             <div class="header-mobile__wrapper">
@@ -223,7 +236,9 @@
                 <div class="header-mobile__link-box">
                   <h6 class="header-mobile__title">Детские матрасы</h6>
                 </div>
-                <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+                <svg class="header-mobile__arrow arrow-down__icon">
+                  <use href="images/icons/icons.svg#angle-down" />
+                </svg>
               </a>
             </div>
           </div>
@@ -236,7 +251,9 @@
               </div>
               <h6 class="header-mobile__title">Подушки</h6>
             </div>
-            <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+            <svg class="header-mobile__arrow arrow-down__icon">
+              <use href="images/icons/icons.svg#angle-down" />
+            </svg>
           </a>
         </div>
         <div class="header-mobile__wrapper">
@@ -247,7 +264,9 @@
               </div>
               <h6 class="header-mobile__title">Кровати</h6>
             </div>
-            <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+            <svg class="header-mobile__arrow arrow-down__icon">
+              <use href="images/icons/icons.svg#angle-down" />
+            </svg>
           </a>
         </div>
         <div class="header-mobile__wrapper">
@@ -258,7 +277,9 @@
               </div>
               <h6 class="header-mobile__title">Одеяла</h6>
             </div>
-            <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+            <svg class="header-mobile__arrow arrow-down__icon">
+              <use href="images/icons/icons.svg#angle-down" />
+            </svg>
           </a>
         </div>
         <div class="header-mobile__wrapper">
@@ -269,7 +290,9 @@
               </div>
               <h6 class="header-mobile__title">Диваны</h6>
             </div>
-            <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+            <svg class="header-mobile__arrow arrow-down__icon">
+              <use href="images/icons/icons.svg#angle-down" />
+            </svg>
           </a>
         </div>
         <div class="header-mobile__wrapper">
@@ -280,7 +303,9 @@
               </div>
               <h6 class="header-mobile__title">Детские товары</h6>
             </div>
-            <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+            <svg class="header-mobile__arrow arrow-down__icon">
+              <use href="images/icons/icons.svg#angle-down" />
+            </svg>
           </a>
         </div>
         <div class="header-mobile__wrapper">
@@ -291,7 +316,9 @@
               </div>
               <h6 class="header-mobile__title">Мебель</h6>
             </div>
-            <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+            <svg class="header-mobile__arrow arrow-down__icon">
+              <use href="images/icons/icons.svg#angle-down" />
+            </svg>
           </a>
         </div>
         <div class="header-mobile__wrapper">
@@ -302,7 +329,9 @@
               </div>
               <h6 class="header-mobile__title">Для дома</h6>
             </div>
-            <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+            <svg class="header-mobile__arrow arrow-down__icon">
+              <use href="images/icons/icons.svg#angle-down" />
+            </svg>
           </a>
         </div>
         <div class="header-mobile__wrapper">
@@ -313,7 +342,9 @@
               </div>
               <h6 class="header-mobile__title">Акции</h6>
             </div>
-            <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+            <svg class="header-mobile__arrow arrow-down__icon">
+              <use href="images/icons/icons.svg#angle-down" />
+            </svg>
           </a>
         </div>
       </div>
@@ -326,7 +357,9 @@
               </div>
               <h6 class="header-mobile__title">Магазины</h6>
             </div>
-            <img class="header-mobile__arrow" src="@img//icons/angle-down.svg" alt="arrow">
+            <svg class="header-mobile__arrow arrow-down__icon">
+              <use href="images/icons/icons.svg#angle-down" />
+            </svg>
           </a>
         </div>
         <div class="header-mobile__footer-call">

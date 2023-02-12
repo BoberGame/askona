@@ -47,7 +47,7 @@
   &:hover,
   &:focus {
     .mobile-menu__icon {
-      fill: $accent;
+      color: $accent;
     }
 
     .mobile-menu__counter {
@@ -62,11 +62,11 @@
   margin-bottom: 4px;
   width: 25px;
   height: 25px;
-  fill: #b0b0b0;
-  transition: fill 0.3s, stroke 0.3s;
+  color: #b0b0b0;
+  transition: color 0.3s;
 
   &--logo {
-    fill: $accent;
+    color: $accent;
   }
 
   @media (max-width: 520px) {

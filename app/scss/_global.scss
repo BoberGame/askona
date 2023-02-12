@@ -58,9 +58,29 @@ body {
   width: 32px;
   height: 32px;
 
+  svg {
+    color: $accent;
+    height: 9px;
+    width: 5px;
+  }
+
+  &--prev {
+    padding-right: 3px;
+  }
+  &--next {
+    padding-left: 3px;
+  }
+
   &:hover {
     border-color: #aaa;
   }
+}
+
+.arrow-down__icon {
+  width: 9px;
+  height: 5px;
+  color: $accent;
+  transition: transform 0.3s;
 }
 
 .scroll-top {
@@ -83,6 +103,12 @@ body {
     right: 50px;
     opacity: 1;
     visibility: visible;
+  }
+
+  &__icon {
+    color: #231f20;
+    width: 40px;
+    height: 40px;
   }
 
   &__text {

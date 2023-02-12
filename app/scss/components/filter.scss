@@ -51,7 +51,7 @@
   }
 
   &.active {
-    & .filter__icon {
+    & .arrow-down__icon {
       transform: rotate(180deg);
     }
 
@@ -80,10 +80,6 @@
   font-weight: 500;
   color: $dark-gray;
   user-select: none;
-}
-
-.filter__icon {
-  transition: transform 0.2s;
 }
 
 .filter__footer {
@@ -234,15 +230,15 @@
     margin-right: 0.6em;
     width: 11px;
     height: 11px;
-    fill: #d8d8d8;
-    transition: fill 0.3s;
+    color: #d8d8d8;
+    transition: color 0.3s;
   }
 
   &:hover {
     color: #ff0064;
 
     svg {
-      fill: #ff0064;
+      color: #ff0064;
     }
   }
 

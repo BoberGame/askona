@@ -1,5 +1,11 @@
 .checkbox__btn {
   position: relative;
+
+  &.active {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .checkbox__item {

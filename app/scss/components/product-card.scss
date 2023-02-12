@@ -23,25 +23,25 @@
     left: 2%;
     z-index: 15;
 
-    &-button {
-      &.active svg {
-        fill: #ff0064;
-      }
-    }
-
-    svg {
-      width: 20px;
-      height: 20px;
-      fill: #b1b1b1;
-      transition: fill 0.3s;
-
-      &:hover {
-        fill: #ff0064;
+    &-button.active {
+      .product-card__icon {
+        color: #ff0064;
       }
     }
 
     @media (min-width: 768px) {
       opacity: 0;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    color: #b1b1b1;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #ff0064;
     }
   }
 
@@ -260,6 +260,7 @@
       margin-right: 14px;
       width: 20px;
       height: 20px;
+      color: #231F20;
 
       @media (max-width: 1200px) {
         margin-right: 8px;

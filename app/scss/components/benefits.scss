@@ -54,10 +54,9 @@
     &-icon {
       margin-bottom: 24px;
 
-      img {
-        width: 64px;
-        height: 64px;
-      }
+      width: 64px;
+      height: 64px;
+      color: $accent;
     }
 
     &-title {

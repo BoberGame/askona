@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/head.html',{ "title":"Карточка товара" })
+
+<body>
+  @@include('components/header.html')
+  <!-- cart -->
+  @@include('components/header/cart.html')
+  <!-- filter -->
+  @@include('components/card-popup.html')
+  <!-- mobile-menu -->
+  @@include('components/mobile-menu.html')
+  <!-- Scroll-top -->
+  @@include('components/scroll-top.html')
+  <main>
+    <div class="catalog">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        @@include('components/breadcrumbs.html', {
+        "link": "#",
+        "name": "Матрасы"})
+
+      </div>
+    </div>
+  </main>
+  @@include('components/footer.html',{})
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

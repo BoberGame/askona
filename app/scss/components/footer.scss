@@ -69,14 +69,10 @@
       padding: 16px 0;
       display: flex;
 
-      img {
-        transition: transform 0.3s;
-      }
-
       &.active {
         padding-bottom: 0;
 
-        img {
+        svg {
           transform: rotate(180deg);
         }
       }
@@ -98,19 +94,18 @@
 
   &__contact-mediaLink {
     margin: 0 6px;
+  }
+
+  &__contact-icon {
     width: 36px;
     height: 36px;
+    color: #7e7e7e;
 
-    svg {
-      fill: #7e7e7e;
-      transition: fill 0.2s;
-    }
+    transition: color 0.3s;
 
     &:hover,
     &:focus {
-      svg {
-        fill: $accent;
-      }
+      color: $accent;
     }
   }
 
