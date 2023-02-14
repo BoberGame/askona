@@ -35,8 +35,8 @@
   }
 
   &__icon {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     color: #b1b1b1;
     transition: color 0.3s;
 
@@ -260,7 +260,7 @@
       margin-right: 14px;
       width: 20px;
       height: 20px;
-      color: #231F20;
+      color: #231f20;
 
       @media (max-width: 1200px) {
         margin-right: 8px;
@@ -307,6 +307,23 @@
     &-more {
       font-size: 12px;
       color: $gray;
+    }
+
+    &--sm {
+      padding-top: 0;
+      .product-card__colors-item {
+        width: 9px;
+        height: 9px;
+
+        @media (max-width: 520px) {
+          width: 9px;
+          height: 9px;
+        }
+      }
+
+      .product-card__colors-more {
+        font-size: 10px;
+      }
     }
   }
 

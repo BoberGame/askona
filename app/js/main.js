@@ -46,13 +46,19 @@ try {
 
 try {
   new Splide('#cart-more-slider', {
-    perPage: 2,
+    perPage: 2.5,
     perMove: 1,
     type: 'loop',
     gap: '32px',
     arrows: true,
+    pagination: false,
     flickPower: 100,
     flickMaxPages: 1,
+    breakpoints: {
+      425: {
+        perPage: 2,
+      },
+    },
   }).mount();
 } catch (error) {}
 
@@ -61,7 +67,6 @@ try {
     perPage: 1,
     perMove: 1,
     type: 'loop',
-    gap: '32px',
     flickPower: 100,
     flickMaxPages: 1,
     mediaQuery: 'min',

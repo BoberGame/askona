@@ -14,38 +14,41 @@ const sass = gulpSass(dartSass);
 
 export const scss = () => {
   // https://github.com/evrone/postcss-px-to-viewport
-  var processors = [
-    pxtoviewport({
-      viewportWidth: 1920,
-      viewportUnit: 'vmax',
-      selectorBlackList: [
-        '.catalog',
-        '.product-card',
-        '.btn',
-        '.filter',
-        '.checkbox',
-        '.select',
-        '.card',
-        '.mobile-menu',
-        '.pagination',
-        '.breadcrumbs',
-        '.noUi',
-        '.splide',
-        '.header',
-        '.footer',
-        '.benefits',
-        '.sale',
-        '.products',
-        '.arrow',
-        '.card',
-        '.title',
-        '.ts',
-        '.scrollbar',
-        '.text',
-        'p'
-      ],
-    }),
-  ];
+  // var processors = [
+  //   pxtoviewport({
+  //     viewportWidth: 1920,
+  //     viewportUnit: 'vmax',
+  //     selectorBlackList: [
+  //       '.catalog',
+  //       '.product-card',
+  //       '.btn',
+  //       '.filter',
+  //       '.checkbox',
+  //       '.select',
+  //       '.card',
+  //       '.mobile-menu',
+  //       '.pagination',
+  //       '.breadcrumbs',
+  //       '.noUi',
+  //       '.splide',
+  //       '.header',
+  //       '.footer',
+  //       '.benefits',
+  //       '.sale',
+  //       '.products',
+  //       '.arrow',
+  //       '.card',
+  //       '.title',
+  //       '.ts',
+  //       '.scrollbar',
+  //       '.text',
+  //       '.banner',
+  //       '.info',
+  //       '.cart',
+  //       'p'
+  //     ],
+  //   }),
+  // ];
   return (
     app.gulp
       .src(app.path.src.scss, { sourcemaps: app.isDev })
@@ -91,7 +94,7 @@ export const scss = () => {
           extname: '.min.css',
         }),
       )
-      .pipe(postcss(processors))
+      // .pipe(postcss(processors))
       .pipe(app.gulp.dest(app.path.build.css))
       .pipe(app.plugins.browsersync.stream())
   );
