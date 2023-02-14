@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.min.css?_v=20230214182459">
   <title>Каталог</title>
 </head>
 
@@ -34,11 +34,9 @@
         <div class="header__top-countryWrapper">
           <button class="header__top-country" type="button">
             <img class="header__top-countryFlag" src="images/icons/rus.svg" alt="rus">
-            <span class="header__top-countryToggler">
-              <svg class="arrow-down__icon">
-                <use href="images/icons/icons.svg#angle-down" />
-              </svg>
-            </span>
+            <svg class="arrow-down__icon">
+              <use href="images/icons/icons.svg#angle-down" />
+            </svg>
           </button>
           <div class="header__top-countryList">
             <button class="header__top-country" type="button">
@@ -2023,12 +2021,10 @@
   <main>
     <div class="catalog">
       <div class="container">
-        <!-- Breadcrumbs -->
         <div class="breadcrumbs">
-  <a class="breadcrumbs__item" href="index.html">Главная</a>
-  <a class="breadcrumbs__item" href="#">Диваны</a>
-</div>
-
+          <a class="breadcrumbs__item" href="index.html">Главная</a>
+          <a class="breadcrumbs__item" href="#">Диваны</a>
+        </div>
         <div class="catalog__header">
           <h2 class="title-2 catalog__title">Диваны</h2>
           <!-- category-slider -->
@@ -2060,6 +2056,7 @@
           <h6 class="category-slider__title">Кровати</h6>
           <span class="category-slider__count">632</span>
         </a>
+      </li>
       <li class="splide__slide">
         <a href="#" class="category-slider__link">
           <img class="category-slider__image" src="images/content/category-slider/category-2.png" alt="category-icon">
@@ -2422,7 +2419,7 @@
           </div>
           <div class="catalog-filters__right">
             <div class="catalog__counter catalog__counter--filters">Товаров: <span>157</span></div>
-            <select class="select" id="select-catalog" autocomplete="off">
+            <select class="catalog-select select" id="select-catalog" autocomplete="off">
               <option value="4">Самые дорогие</option>
               <option value="1">Самые недорогие</option>
               <option value="3">Самые новые</option>
@@ -3649,7 +3646,7 @@
     </div>
   </div>
 </footer>
-  <script src="js/main.min.js"></script>
+  <script src="js/main.min.js?_v=20230214182459"></script>
 </body>
 
 </html>
