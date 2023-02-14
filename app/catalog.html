@@ -15,11 +15,10 @@
   <main>
     <div class="catalog">
       <div class="container">
-        <!-- Breadcrumbs -->
-        @@include('components/breadcrumbs.html', {
-        "link": "#",
-        "name": "Диваны"})
-
+        <div class="breadcrumbs">
+          <a class="breadcrumbs__item" href="index.html">Главная</a>
+          <a class="breadcrumbs__item" href="#">Диваны</a>
+        </div>
         <div class="catalog__header">
           <h2 class="title-2 catalog__title">Диваны</h2>
           <!-- category-slider -->
@@ -317,7 +316,7 @@
           </div>
           <div class="catalog-filters__right">
             <div class="catalog__counter catalog__counter--filters">Товаров: <span>157</span></div>
-            <select class="select" id="select-catalog" autocomplete="off">
+            <select class="catalog-select select" id="select-catalog" autocomplete="off">
               <option value="4">Самые дорогие</option>
               <option value="1">Самые недорогие</option>
               <option value="3">Самые новые</option>

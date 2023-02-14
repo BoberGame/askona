@@ -37,6 +37,12 @@ export const scss = () => {
         '.sale',
         '.products',
         '.arrow',
+        '.card',
+        '.title',
+        '.ts',
+        '.scrollbar',
+        '.text',
+        'p'
       ],
     }),
   ];

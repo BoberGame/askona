@@ -47,3 +47,11 @@ $filterMenu.forEach(($menu) => {
     scrollHandler($menu);
   });
 });
+
+// const $scrollItems = document.querySelectorAll('.scrollbar');
+// $scrollItems.forEach(($item) => {
+//   scrollHandler($item);
+//   $item.addEventListener('scroll', () => {
+//     scrollHandler($item);
+//   });
+// });

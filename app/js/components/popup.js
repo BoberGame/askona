@@ -1,4 +1,5 @@
 const $popupOpeners = document.querySelectorAll('[data-opener]');
+import { calcScroll } from './header.js';
 
 $popupOpeners.forEach((btn) => {
   btn.addEventListener('click', (e) => {
@@ -7,6 +8,7 @@ $popupOpeners.forEach((btn) => {
     const $popupBg = $popup.querySelector('.popup__overlay');
     const $popupBox = $popup.querySelector('.popup__box');
     const $popupClose = $popup.querySelector('.popup__close');
+    const scrollBarWidth = calcScroll();
     e.preventDefault();
 
     $popup.style.display = 'block';
@@ -16,10 +18,10 @@ $popupOpeners.forEach((btn) => {
     setTimeout(() => {
       $popupBox.style.transform = 'translateX(0)';
     }, 100);
+  
+    document.body.classList.add('no-scroll');
+    document.body.style.marginRight = `${scrollBarWidth}px`;
     $popup.classList.add('popup-opened');
-    if (window.matchMedia('(max-width: 1024px)').matches) {
-      document.body.classList.add('no-scroll');
-    }
     [$popupClose, $popupBg].forEach(($el) => {
       $el.addEventListener('click', (e) => {
         setTimeout(() => {
@@ -28,14 +30,12 @@ $popupOpeners.forEach((btn) => {
         setTimeout(() => {
           $popupBg.style.opacity = '0';
         }, 100);
-
+        document.body.classList.remove('no-scroll');
+        document.body.style.marginRight = ``;
         $popup.classList.remove('popup-opened');
         setTimeout(() => {
           $popup.style.display = 'none';
         }, 400);
-        if (window.matchMedia('(max-width: 1024px)').matches) {
-          document.body.classList.remove('no-scroll');
-        }
       });
     });
   });

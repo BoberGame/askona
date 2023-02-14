@@ -159,6 +159,9 @@ for (let i = 1; i <= 2; i++) {
       arrows: true,
       flickPower: 100,
       flickMaxPages: 1,
+      dragMinThreshold: {
+        touch: 10,
+      },
       breakpoints: {
         1440: {
           perPage: 3,
@@ -168,7 +171,7 @@ for (let i = 1; i <= 2; i++) {
           perPage: 2,
         },
         580: {
-          perPage: 2,
+          // perPage: 1.5,
         },
       },
     }).mount();
@@ -208,7 +211,6 @@ for (let index = 0; index < galleryItems.length; index++) {
     });
     slider.mount();
     const slidesLen = slider.length;
-
     if (slidesLen > 1) {
       if (window.matchMedia('(min-width: 728px)').matches) {
         slideForHover(element, slider);
@@ -216,6 +218,45 @@ for (let index = 0; index < galleryItems.length; index++) {
     }
   }
 }
+
+try {
+  new Splide('#card-reviews-slider', {
+    perPage: 6,
+    perMove: 1,
+    type: 'loop',
+    gap: '20px',
+    arrows: false,
+    pagination: true,
+    flickPower: 100,
+    flickMaxPages: 1,
+    dragMinThreshold: {
+      touch: 10,
+    },
+    breakpoints: {
+      1200: {
+        perPage: 4,
+      },
+    },
+  }).mount();
+} catch (error) {}
+
+try {
+  new Splide('#card-reviews-sliderPopup', {
+    perPage: 2.5,
+    perMove: 1,
+    type: 'loop',
+    gap: '20px',
+    arrows: false,
+    pagination: true,
+    flickPower: 100,
+    flickMaxPages: 1,
+    // breakpoints: {
+    //   902: {
+    //     perPage: 1.5,
+    //   },
+    // },
+  }).mount();
+} catch (error) {}
 
 for (let i = 1; i <= 2; i++) {
   try {
@@ -230,6 +271,93 @@ for (let i = 1; i <= 2; i++) {
     }).mount();
   } catch (error) {}
 }
+
+for (let i = 1; i <= 2; i++) {
+  try {
+    new Splide(`#card-attachment-slider-${i}`, {
+      perPage: 3.5,
+      perMove: 1,
+      type: 'loop',
+      gap: '20px',
+      arrows: false,
+      pagination: true,
+      flickPower: 100,
+      flickMaxPages: 1,
+      // breakpoints: {
+      //   902: {
+      //     perPage: 2.5,
+      //   },
+      // },
+    }).mount();
+  } catch (error) {}
+}
+
+for (let i = 1; i <= 2; i++) {
+  try {
+    new Splide(`.card-slider-${i}`, {
+      perPage: 4,
+      perMove: 1,
+      type: 'loop',
+      gap: '32px',
+      flickPower: 100,
+      flickMaxPages: 1,
+      pagination: false,
+      dragMinThreshold: {
+        touch: 10,
+      },
+      breakpoints: {
+        1440: {
+          perPage: 3,
+          arrows: false,
+        },
+        900: {
+          perPage: 2,
+        },
+        580: {
+          perPage: 2,
+        },
+      },
+    }).mount();
+  } catch (error) {}
+}
+
+try {
+  const thumbnails = new Splide('#thumbnails', {
+    fixedWidth: 114,
+    fixedHeight: 76,
+    height: 540,
+    isNavigation: true,
+    gap: 16,
+    direction: 'ttb',
+    pagination: false,
+    breakpoints: {
+      1024: {
+        fixedWidth: 95,
+      },
+      768: {
+        destroy: true,
+      },
+    },
+  });
+  const main = new Splide('#thumbnail-main', {
+    pagination: false,
+    arrows: false,
+    type: 'slide',
+    speed: 600,
+    dragMinThreshold: {
+      touch: 10,
+    },
+    breakpoints: {
+      768: {
+        pagination: true,
+        type: 'loop',
+      },
+    },
+  });
+  main.sync(thumbnails);
+  main.mount();
+  thumbnails.mount();
+} catch (error) {}
 
 window.addEventListener('scroll', (e) => {
   if (window.pageYOffset > 1000) {

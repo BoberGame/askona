@@ -32,9 +32,9 @@
   margin: 0;
   pointer-events: auto;
 }
-.splide:not(.is-overflow) .splide__pagination {
-  display: none;
-}
+// .splide:not(.is-overflow) .splide__pagination {
+//   display: none;
+// }
 .splide__progress__bar {
   width: 0;
 }
@@ -257,13 +257,13 @@
   outline: 3px solid #0bf;
   outline-offset: 3px;
 }
-.splide__track--nav > .splide__list > .splide__slide {
-  border: 3px solid transparent;
-  cursor: pointer;
-}
-.splide__track--nav > .splide__list > .splide__slide.is-active {
-  border: 3px solid #000;
-}
+// .splide__track--nav > .splide__list > .splide__slide {
+//   border: 3px solid transparent;
+//   cursor: pointer;
+// }
+// .splide__track--nav > .splide__list > .splide__slide.is-active {
+//   border: 3px solid #000;
+// }
 .splide__arrows--rtl .splide__arrow--prev {
   left: auto;
   right: 1em;
