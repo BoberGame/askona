@@ -25,11 +25,13 @@ function cartCounterFocus(e) {
   }
 }
 
-$cartItems = $cart.querySelectorAll('[data-cart="item"]');
-$cartItems &&
-  $cartItems.forEach(($el) => {
-    $el.addEventListener('click', (e) => cartCounterClicks($el, e));
+$cartItems = document.querySelectorAll('[data-cart="item"]');
+if ($cartItems) {
+  $cartItems &&
+    $cartItems.forEach(($el) => {
+      $el.addEventListener('click', (e) => cartCounterClicks($el, e));
 
-    const $input = $el.querySelector('[data-cart="counter"]');
-    $input.addEventListener('focusout', (e) => cartCounterFocus(e));
-  });
+      const $input = $el.querySelector('[data-cart="counter"]');
+      $input.addEventListener('focusout', (e) => cartCounterFocus(e));
+    });
+}

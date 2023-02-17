@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/head.html',{ "title":"Оформление заказа" })
+
+<body>
+  @@include('components/header-order.html')
+  <!-- mobile-menu -->
+  @@include('components/mobile-menu.html')
+  <main class="main-order">
+    <div class="order">
+      <div class="container container--order">
+        <div class="order__header">
+          <h2 class="title-2">Оформление заказа</h2>
+        </div>
+        <div class="order__wrapper">
+          <div class="order-form">
+            <div class="order-result" data-accordion>
+              <button class="order-result__btn" data-accordion="btn">
+                <span class="title-3">Ваш заказ (2)</span>
+                <svg class="arrow-down__icon">
+                  <use href="images/icons/icons.svg#angle-down" />
+                </svg>
+              </button>
+              <div class="order-result__list">
+                <div class="cart-item cart-item--order" data-cart="item">
+                  <div class="cart-item__left">
+                    <div class="cart-item__image">
+                      <img src="@img//content//cart/item-4.jpg" alt="cart-item-image">
+                    </div>
+                    <div class="cart-item__info">
+                      <a href="card.html" class="cart-item__info-title">Ортопедический матрас Askona Ortho Hard</a>
+                      <div class="cart-item__info-text">140x220 Велюр</div>
+                      <div class="cart-item__product-prices">
+                        <span class="cart-item__product-price cart-item__product-price--actual">48 900 BYN</span>
+                        <span class="cart-item__product-price cart-item__product-price--old">97 800 BYN</span>
+                        <div class="cart-item__product-sale">
+                          <span>-50%</span>
+                          <svg>
+                            <use href="images/icons/icons.svg#sale-lable" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart-item__product cart-item__product--order">
+                    <div class="cart-item__info-buttons cart-item__info-buttons--order">
+                      <button class="cart-item__info-btn cart-item__info-btn--add" type="button">Добавить в избраноое</button>
+                      <button class="cart-item__info-btn cart-item__info-btn--remove" type="button">Удалить</button>
+                    </div>
+                    <div class="cart-counter cart-counter--order">
+                      <button class="cart-counter__btn" data-cart="decrement" type="button">
+                        <svg class="cart-counter__icon">
+                          <use href="images/icons/icons.svg#decrement" />
+                        </svg>
+                      </button>
+                      <input class="cart-counter__input" type="text" value="1" data-cart="counter">
+                      <button class="cart-counter__btn" data-cart="increment" type="button">
+                        <svg class="cart-counter__icon">
+                          <use href="images/icons/icons.svg#increment" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <button class="cart-item__btn-close" type="button">
+                    <svg>
+                      <use href="images/icons/icons.svg#close-sm" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="cart-item cart-item--order" data-cart="item">
+                  <div class="cart-item__left">
+                    <div class="cart-item__image">
+                      <img src="@img//content//cart/item-4.jpg" alt="cart-item-image">
+                    </div>
+                    <div class="cart-item__info">
+                      <a href="card.html" class="cart-item__info-title">Ортопедический матрас Askona Ortho Hard</a>
+                      <div class="cart-item__info-text">140x220 Велюр</div>
+                      <div class="cart-item__product-prices">
+                        <span class="cart-item__product-price cart-item__product-price--actual">48 900 BYN</span>
+                        <span class="cart-item__product-price cart-item__product-price--old">97 800 BYN</span>
+                        <div class="cart-item__product-sale">
+                          <span>-50%</span>
+                          <svg>
+                            <use href="images/icons/icons.svg#sale-lable" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart-item__product cart-item__product--order">
+                    <div class="cart-item__info-buttons cart-item__info-buttons--order">
+                      <button class="cart-item__info-btn cart-item__info-btn--add" type="button">Добавить в избраноое</button>
+                      <button class="cart-item__info-btn cart-item__info-btn--remove" type="button">Удалить</button>
+                    </div>
+                    <div class="cart-counter cart-counter--order">
+                      <button class="cart-counter__btn" data-cart="decrement" type="button">
+                        <svg class="cart-counter__icon">
+                          <use href="images/icons/icons.svg#decrement" />
+                        </svg>
+                      </button>
+                      <input class="cart-counter__input" type="text" value="1" data-cart="counter">
+                      <button class="cart-counter__btn" data-cart="increment" type="button">
+                        <svg class="cart-counter__icon">
+                          <use href="images/icons/icons.svg#increment" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <button class="cart-item__btn-close" type="button">
+                    <svg>
+                      <use href="images/icons/icons.svg#close-sm" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="order-form__main">
+              <div class="order-form__group">
+                <label class="form-input__label" for="order-input-1">
+                  <span class="form-input__title">Телефон:</span>
+                  <input class="form-input__control" type="tel" placeholder="Например,  + 375 (29) 000-00-00" id="order-input-1">
+                </label>
+                <label class="form-input__label" for="order-input-2">
+                  <span class="form-input__title">Имя:</span>
+                  <input class="form-input__control" type="text" placeholder="Введите ваше Имя " id="order-input-2">
+                </label>
+                <label class="form-input__label" for="order-input-3">
+                  <span class="form-input__title">Фамилия:</span>
+                  <input class="form-input__control" type="text" placeholder="Введите вашу Фамилию " id="order-input-3">
+                </label>
+                <label class="form-input__label" for="order-input-4">
+                  <span class="form-input__title">Эл. почта:</span>
+                  <input class="form-input__control" type="email" placeholder="Введите адрес электронной почты " id="order-input-4">
+                </label>
+              </div>
+              <div class="order-form__hidden">
+                <h3 class="order-form__title">Регион доставки</h3>
+                <div class="order-form__group">
+                  <label class="form-input__label" for="order-input-6">
+                    <span class="form-input__title">Город:</span>
+                    <select class="order-form__select select" id="order-input-6" autocomplete="off">
+                      <option value="1">Минск</option>
+                      <option value="2">Брест</option>
+                      <option value="3">Гродно</option>
+                    </select>
+                  </label>
+                  <input class="form-input__control form-input__control--label" type="text" value="г. Минск. Склад: ул. Промышленная,19" disabled>
+                </div>
+              </div>
+              <h3 class="order-form__title">Способы доставки</h3>
+              <div class="order-form__group order-form__group--radio">
+                <label class="checkbox__label order-form__radio" for="order-delivery-1">
+                  <input class="checkbox__input" type="radio" id="order-delivery-1" value="1" name="delivery-method" checked>
+                  <span class="checkbox__switcher checkbox__switcher--radio"></span>
+                  <span class="checkbox__text">Доставка курьером</span>
+                </label>
+                <label class="checkbox__label order-form__radio" for="order-delivery-2">
+                  <input class="checkbox__input" type="radio" id="order-delivery-2" value="2" name="delivery-method">
+                  <span class="checkbox__switcher checkbox__switcher--radio"></span>
+                  <span class="checkbox__text">Самовывоз из магазина Аскона</span>
+                </label>
+              </div>
+              <div class="order-form__group">
+                <label class="form-input__label order-form__desk" for="order-input-5">
+                  <span class="form-input__title">Город:</span>
+                  <select class="order-form__select select" id="order-input-5" autocomplete="off">
+                    <option value="1">Минск</option>
+                    <option value="2">Брест</option>
+                    <option value="3">Гродно</option>
+                  </select>
+                </label>
+                <input class="form-input__control form-input__control--label order-form__desk" type="text" value="г. Минск. Склад: ул. Промышленная,19" disabled>
+                <label class="form-input__label form-input__label--address" for="order-input-7">
+                  <span class="form-input__title">Адрес:</span>
+                  <input class="form-input__control" type="text" id="order-input-7">
+                </label>
+                <button class="order-form__comment-call order-form__hidden" type="button">Комментарий к заказу</button>
+                <label class="form-input__label form-input__label--comment" for="order-input-8">
+                  <span class="form-input__title">Комментарий:</span>
+                  <textarea class="form-input__control form-input__control--text" id="order-input-8"></textarea>
+                </label>
+              </div>
+              <h3 class="order-form__title">Способы оплаты</h3>
+              <div class="order-form__group order-form__group--radio">
+                <label class="checkbox__label order-form__radio" for="order-payment-1">
+                  <input class="checkbox__input" type="radio" id="order-payment-1" value="1" name="payment-method" checked>
+                  <span class="checkbox__switcher checkbox__switcher--radio"></span>
+                  <span class="checkbox__text">Картой при получении</span>
+                </label>
+                <label class="checkbox__label order-form__radio" for="order-payment-2">
+                  <input class="checkbox__input" type="radio" id="order-payment-2" value="2" name="payment-method">
+                  <span class="checkbox__switcher checkbox__switcher--radio"></span>
+                  <span class="checkbox__text">Наличными при получении</span>
+                </label>
+                <label class="checkbox__label order-form__radio" for="order-payment-3">
+                  <input class="checkbox__input" type="radio" id="order-payment-3" value="2" name="payment-method">
+                  <span class="checkbox__switcher checkbox__switcher--radio"></span>
+                  <span class="checkbox__text">Банковский перевод (для юр. лиц)</span>
+                </label>
+                <div class="order-form__notice order-form__hidden">
+                  <p>Оплата осуществляется только картой или наличными.</p>
+                  <p>Заранее проговорите этот момент с менеджером.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-info">
+            <div class="order-info__header">
+              <h2 class="title-3">Стоимость заказа</h2>
+              <div class="order-info__text">Сроки доставки уточнит менеджер при обработке заказа</div>
+            </div>
+            <div class="order-info__block">
+              <div class="order-info__item">
+                <div class="order-info__label">Товары (2)</div>
+                <div class="order-info__price">100 BYN</div>
+              </div>
+              <div class="order-info__item">
+                <div class="order-info__label">Скидка</div>
+                <div class="order-info__price">-0 BYN</div>
+              </div>
+            </div>
+            <div class="order-info__promo" data-accordion>
+              <button class="order-info__promo-btn" data-accordion="btn" type="button">
+                Бонусная программа
+                <svg class="arrow-down__icon">
+                  <use href="images/icons/icons.svg#angle-down" />
+                </svg>
+              </button>
+              <div class="order-info__promo-content">
+                <form class="order-form__promo" autocomplete="off">
+                  <input class="form-input__control form-input__control--promo" type="text" placeholder="Введите промокод ...">
+                  <button class="order-form__promo-btn btn btn--dark" type="button">Применить</button>
+                </form>
+                <div class="order-info__promo-text">ВНИМАНИЕ: бонусы актуальны для товара со скидкой до 51% и применяются в размере до 20% от стоимости заказа</div>
+              </div>
+            </div>
+            <div class="order-info__promo valued" data-accordion>
+              <button class="order-info__promo-btn" data-accordion="btn" type="button">
+                Использовать промокод
+                <svg class="arrow-down__icon">
+                  <use href="images/icons/icons.svg#angle-down" />
+                </svg>
+              </button>
+              <button class="order-form__close" type="button">
+                <svg>
+                  <use href="images/icons/icons.svg#close-sm" />
+                </svg>
+              </button>
+              <span class="order-promo__code">FREEDOM43</span>
+              <div class="order-info__promo-content">
+                <form class="order-form__promo" autocomplete="off">
+                  <input class="form-input__control form-input__control--promo" type="text" placeholder="Введите промокод ...">
+                  <button class="order-form__promo-btn btn btn--dark" type="button">Применить</button>
+                </form>
+                <div class="order-info__promo-text">ВНИМАНИЕ: бонусы актуальны для товара со скидкой до 51% и применяются в размере до 20% от стоимости заказа</div>
+              </div>
+            </div>
+            <div class="order-form__promo-total order-form__hidden">
+              <div class="order-info__item">
+                <div class="order-info__label">Списать бонусы:</div>
+                <div class="order-info__price">+ 9 000 руб.</div>
+              </div>
+              <div class="order-info__item">
+                <div class="order-info__label">Бонусы после покупки:</div>
+                <div class="order-info__price">+ 9 000 руб.</div>
+              </div>
+            </div>
+            <div class="order-info__total">
+              <div class="order-info__item order-info__item--total">
+                <div class="order-info__label">Итого</div>
+                <div class="order-info__price">127 BYN</div>
+              </div>
+              <div class="order-info__item order-info__item--current">
+                <div class="order-info__label">Сейчас к оплате</div>
+                <div class="order-info__price">127 BYN</div>
+              </div>
+            </div>
+            <label class="checkbox__label order-form__newsletter order-form__hidden" for="newsletter-checkbox">
+              <input class="checkbox__input" type="checkbox" id="newsletter-checkbox" value="1" checked>
+              <span class="checkbox__switcher"></span>
+              <span class="checkbox__text">Получать специальные предложения и новости</span>
+            </label>
+            <button class="btn btn--accent btn--100" type="button">Отправить заказ</button>
+            <div class="order-info__agreement">Нажимая на кнопку, вы соглашаетесь с <a href="#">договором-оферты</a> и <a href="#">политикой обработки и защиты персональных данных</a>.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -31,6 +31,7 @@
 
   &__text {
     max-width: 730px;
+    font-size: 14px;
   }
 
   &__box {
@@ -69,7 +70,7 @@
 
       @media (max-width: 1440px) {
         font-size: 15.7px;
-        margin-bottom: 8px;
+        // margin-bottom: 16px;
         max-width: none;
       }
     }
@@ -155,7 +156,8 @@
     }
 
     &__inner {
-      padding: 30px 5px 60px;
+      padding: 30px 12px 60px;
+      // padding: 30px 5px 60px;
     }
 
     &__title {
@@ -193,6 +195,12 @@
   @media (max-width: 425px) {
     .benefits__item-title {
       font-size: 17px;
+    }
+  }
+
+  @media (max-width: 374px) {
+    .benefits__item-title {
+      font-size: 15px;
     }
   }
 }

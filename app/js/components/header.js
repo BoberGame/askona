@@ -8,23 +8,29 @@ $banner.addEventListener('click', (event) => {
 });
 
 const $countryToggler = document.querySelector('.header__top-countryWrapper');
-$countryToggler.addEventListener('click', () => {
-  document.querySelector('.header__top-countryList').classList.toggle('active');
-});
+if ($countryToggler) {
+  $countryToggler.addEventListener('click', () => {
+    document
+      .querySelector('.header__top-countryList')
+      .classList.toggle('active');
+  });
+}
 
-const $headerBurger = document.querySelector('.header-mobile__burger');
-const $headerMobileMenu = document.querySelector('.header-mobile__menu');
-const $headerMobileWrapper = document.querySelector('.header');
+const $header = document.querySelector('.header');
+const $headerBurger = $header.querySelector('.header-mobile__burger');
+const $headerMobileMenu = $header.querySelector('.header-mobile__menu');
 
-$headerBurger.addEventListener('click', (e) => {
-  $headerBurger.classList.toggle('active');
-  $headerMobileMenu.classList.toggle('active');
-  $headerMobileWrapper.classList.toggle('active');
-  document.body.classList.add('no-scroll');
-  if (!$headerBurger.classList.contains('active')) {
-    document.body.classList.remove('no-scroll');
-  }
-});
+if ($headerBurger) {
+  $headerBurger.addEventListener('click', (e) => {
+    $headerBurger.classList.toggle('active');
+    $headerMobileMenu.classList.toggle('active');
+    $header.classList.toggle('active');
+    document.body.classList.add('no-scroll');
+    if (!$headerBurger.classList.contains('active')) {
+      document.body.classList.remove('no-scroll');
+    }
+  });
+}
 
 const callMobileSubmenu = (e) => {
   const link = e.target.closest('.header-mobile__wrapper');
@@ -68,18 +74,21 @@ export const calcScroll = () => {
 };
 
 const callCatalog = () => {
-  const callBtn = document.querySelector('.header__allProducts');
+  const callBtn = document.querySelector('.header__all-btn');
   const catalog = document.querySelector('.products');
   const scrollBarWidth = calcScroll();
-  callBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    catalog.classList.toggle('hidden');
-    document.body.classList.add('no-scroll');
-    document.body.style.marginRight = `${scrollBarWidth}px`;
-    if (catalog.classList.contains('hidden')) {
-      document.body.style.marginRight = '';
-      document.body.classList.remove('no-scroll');
-    }
-  });
+  if (callBtn) {
+    callBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      catalog.classList.toggle('hidden');
+      callBtn.classList.toggle('active');
+      document.body.classList.add('no-scroll');
+      document.body.style.marginRight = `${scrollBarWidth}px`;
+      if (catalog.classList.contains('hidden')) {
+        document.body.style.marginRight = '';
+        document.body.classList.remove('no-scroll');
+      }
+    });
+  }
 };
 callCatalog();

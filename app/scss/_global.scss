@@ -11,6 +11,12 @@
   margin: 0 auto;
   width: 100%;
   max-width: 91.14583vmax;
+
+  &--order {
+    max-width: 1280px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 a {
@@ -95,23 +101,29 @@ body {
 .scroll-top {
   display: flex;
   align-items: center;
-  border: 1px solid $black;
-  position: fixed !important;
+
+  position: fixed;
   bottom: 50px;
   right: -100px;
+  z-index: 100;
+
   opacity: 0;
   visibility: hidden;
+  border: 1px solid $black;
   background-color: #fff;
-  z-index: 100;
   border-radius: 50%;
   transition: opacity 0.3s, right 0.3s, padding 0.3s, visibility 0.3s;
   transition-duration: 0.2s;
   cursor: pointer;
 
   &.active {
-    right: 50px;
+    right: 70px;
     opacity: 1;
     visibility: visible;
+
+    @media (max-width: 1440px) {
+      right: -5px;
+    }
   }
 
   &__icon {
@@ -216,10 +228,10 @@ p {
 }
 
 /* Safari */
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 768px) {
-  select:focus,
-  textarea:focus,
-  input:focus {
-    font-size: 16px;
-  }
-}
+// @media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 768px) {
+//   select:focus,
+//   textarea:focus,
+//   input:focus {
+//     font-size: 16px;
+//   }
+// }

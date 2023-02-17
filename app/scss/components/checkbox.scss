@@ -52,7 +52,7 @@
 
   &::before {
     display: none;
-    content: '';
+    content: "";
     width: 11px;
     height: 12px;
 
@@ -66,14 +66,41 @@
     background-repeat: no-repeat;
   }
 
-  @media (max-width: 1440px) {
-    width: 24px;
-    height: 24px;
-    border-radius: 3px;
+  &--radio {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
 
     &::before {
-      width: 11px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
+      background-image: none;
+
+      background-color: $accent;
+      border-radius: 50%;
+    }
+
+    @media (max-width: 768px) {
+      width: 24px;
+      height: 24px;
+
+      &::before {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  @media (max-width: 1440px) {
+    &:not(&--radio) {
+      width: 24px;
+      height: 24px;
+      border-radius: 3px;
+
+      &::before {
+        width: 11px;
+        height: 12px;
+      }
     }
   }
 }

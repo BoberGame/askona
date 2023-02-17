@@ -5,6 +5,7 @@ $popupOpeners.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     const id = btn.dataset.popup;
     const $popup = document.getElementById(id);
+    if (!$popup) return;
     const $popupBg = $popup.querySelector('.popup__overlay');
     const $popupBox = $popup.querySelector('.popup__box');
     const $popupClose = $popup.querySelector('.popup__close');
@@ -18,7 +19,7 @@ $popupOpeners.forEach((btn) => {
     setTimeout(() => {
       $popupBox.style.transform = 'translateX(0)';
     }, 100);
-  
+
     document.body.classList.add('no-scroll');
     document.body.style.marginRight = `${scrollBarWidth}px`;
     $popup.classList.add('popup-opened');

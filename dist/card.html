@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <link rel="stylesheet" href="css/style.min.css">
+
+  <link rel="stylesheet" href="css/style.min.css?_v=20230217165955">
   <title>Карточка товара</title>
 </head>
-
 
 <body>
   <div class="banner" data-banner="main">
@@ -63,7 +64,7 @@
           <input type="text" placeholder="Поиск по товарам..." class="header__top-searchField">
         </div>
         <a href="tel:+79991043195" class="header__top-call">
-          <svg class="header__top-search__icon">
+          <svg>
             <use href="images/icons/icons.svg#menu-call" />
           </svg>
           <span>Перезвоните мне</span>
@@ -114,8 +115,8 @@
       <input type="text" placeholder="Поиск по товарам..." class="header__top-searchField">
     </div>
     <div class="header__inner">
-      <button class="header__allProducts btn btn--accent">
-        <img src="images/icons/button-burger.svg" alt="menu icon">
+      <button class="header__all-btn btn btn--accent">
+        <span class="header__all-icon"></span>
         Все товары
       </button>
       <nav class="header__menu">
@@ -146,7 +147,7 @@
           </li>
         </ul>
       </nav>
-      <a href="#" class="header__sale">
+      <a href="#" class="header__sale header__menu-link">
         <img src="images/icons/sale.svg" alt="sale icon">
         Акции
       </a>
@@ -178,7 +179,7 @@
               <use href="images/icons/icons.svg#angle-down" />
             </svg>
           </a>
-          <div class="header-mobile-submenu">
+          <div class="header-mobile-submenu scrollbar">
             <div class="header-mobile__wrapper">
               <a href="#" class="header-mobile__link">
                 <div class="header-mobile__link-box">
@@ -1263,7 +1264,7 @@
         </p>
         <div class="cart-total__buttons">
           <button class="cart-total__btn btn btn--white btn--100" type="button">Купить в 1 клик</button>
-          <button class="cart-total__btn btn btn--accent btn--100" type="button">Оформить заказ</button>
+          <a class="cart-total__btn btn btn--accent btn--100" href="order.html">Оформить заказ</a>
         </div>
       </div>
       <div class="cart-more splide" id="cart-more-slider">
@@ -3527,13 +3528,17 @@
         <div class="footer__contact-phone">
           <a href="tel:+375447870750" class="footer__contact-phoneNumber">
             <img src="images/icons/media/phone-1.png" alt="Phone icon">
-            +375 (44) 787-07-50</a>
+            <span><b>+375 (44)</b>787-07-50</span>
+          </a>
           <a href="tel:+375292520396" class="footer__contact-phoneNumber">
             <img src="images/icons/media/phone-2.svg" alt="Phone icon">
-            +375 (29) 252-03-96</a>
+            <span><b>+375 (29)</b>252-03-96</span>
+
+          </a>
           <a href="tel:+375255003743" class="footer__contact-phoneNumber">
             <img src="images/icons/media/phone-3.svg" alt="Phone icon">
-            +375 (25) 500-37-43</a>
+            +375 (25) 500-37-43
+          </a>
         </div>
       </div>
     </div>
@@ -3581,7 +3586,7 @@
     </div>
   </div>
 </footer>
-  <script src="js/main.min.js"></script>
+  <script src="js/main.min.js?_v=20230217165955"></script>
 </body>
 
 </html>

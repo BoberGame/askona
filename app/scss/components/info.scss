@@ -84,7 +84,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    max-width: 410px;
     padding: 0 10px;
 
     background-size: cover;
@@ -96,6 +95,7 @@
 
     @media (min-width: 903px) {
       flex: 1 1 0;
+      max-width: 410px;
     }
   }
 
@@ -137,6 +137,7 @@
 
     @media (max-width: 902px) {
       bottom: 20px;
+      width: 260px;
     }
   }
 
@@ -159,6 +160,7 @@
   @media (max-width: 902px) {
     &__main {
       padding: 20px;
+      margin: 0;
     }
 
     &__box-title {
@@ -195,6 +197,16 @@
 
     &__main-sale {
       margin-bottom: 6px;
+    }
+  }
+
+  @media (max-width: 374px) {
+    &__box-title {
+      font-size: 18px;
+    }
+
+    &__box-text {
+      font-size: 14px;
     }
   }
 }

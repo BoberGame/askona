@@ -22,11 +22,6 @@
     border-color: $accent;
   }
 
-  // img,
-  // svg {
-  //   margin-right: 1.2em;
-  // }
-
   &--accent {
     background-color: #00b6c9;
     color: #fff;
@@ -42,6 +37,15 @@
 
     &:hover {
       border-color: #aaa;
+    }
+  }
+
+  &--dark {
+    background-color: #1a1a18;
+    color: #fff;
+
+    &:hover {
+      background-color: #000;
     }
   }
 

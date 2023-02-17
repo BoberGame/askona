@@ -48,6 +48,30 @@ $filterMenu.forEach(($menu) => {
   });
 });
 
+const $commentCall = document.querySelector('.order-form__comment-call');
+const $commentInput = document.querySelector('.form-input__label--comment');
+if ($commentCall) {
+  $commentCall.addEventListener('click', () => {
+    $commentInput.style.display = 'flex';
+    $commentCall.style.display = 'none';
+  });
+}
+
+const deliveryMethod = () => {
+  const input1 = document.getElementById('order-delivery-1');
+  const input2 = document.getElementById('order-delivery-2');
+  const block = document.querySelector('.form-input__label--address');
+  if (block) {
+    input2.addEventListener('change', (e) => {
+      block.style.display = 'none';
+    });
+    input1.addEventListener('change', (e) => {
+      block.style.display = '';
+    });
+  }
+};
+deliveryMethod();
+
 // const $scrollItems = document.querySelectorAll('.scrollbar');
 // $scrollItems.forEach(($item) => {
 //   scrollHandler($item);
