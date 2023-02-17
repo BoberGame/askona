@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <link rel="stylesheet" href="css/style.min.css?_v=20230214182459">
+
+  <link rel="stylesheet" href="css/style.min.css?_v=20230217164053">
   <title>Главная</title>
 </head>
 
-
 <body>
   <div class="banner" data-banner="main">
-  <div class="banner__container">
+  <div class="banner__container container">
     <a href="#" class="banner__link">
       <img class="banner__img" src="images//content/banner.png" alt="banner">
     </a>
@@ -63,7 +64,7 @@
           <input type="text" placeholder="Поиск по товарам..." class="header__top-searchField">
         </div>
         <a href="tel:+79991043195" class="header__top-call">
-          <svg class="header__top-search__icon">
+          <svg>
             <use href="images/icons/icons.svg#menu-call" />
           </svg>
           <span>Перезвоните мне</span>
@@ -114,8 +115,8 @@
       <input type="text" placeholder="Поиск по товарам..." class="header__top-searchField">
     </div>
     <div class="header__inner">
-      <button class="header__allProducts btn btn--accent">
-        <img src="images/icons/button-burger.svg" alt="menu icon">
+      <button class="header__all-btn btn btn--accent">
+        <span class="header__all-icon"></span>
         Все товары
       </button>
       <nav class="header__menu">
@@ -146,7 +147,7 @@
           </li>
         </ul>
       </nav>
-      <a href="#" class="header__sale">
+      <a href="#" class="header__sale header__menu-link">
         <img src="images/icons/sale.svg" alt="sale icon">
         Акции
       </a>
@@ -178,7 +179,7 @@
               <use href="images/icons/icons.svg#angle-down" />
             </svg>
           </a>
-          <div class="header-mobile-submenu">
+          <div class="header-mobile-submenu scrollbar">
             <div class="header-mobile__wrapper">
               <a href="#" class="header-mobile__link">
                 <div class="header-mobile__link-box">
@@ -1131,25 +1132,25 @@
       <img src="images/content//cart/item-1.jpg" alt="cart-item-image">
     </div>
     <div class="cart-item__info">
-      <h6 class="cart-item__info-title">Анатомический матрас Askona Benefit</h6>
+      <a href="card.html" class="cart-item__info-title">Анатомический матрас Askona Benefit</a>
       <div class="cart-item__info-buttons">
-        <button class="cart-item__info-buttonsItem cart-item__info-buttonsItem--add" type="button">Добавить в избраноое</button>
-        <button class="cart-item__info-buttonsItem cart-item__info-buttonsItem--remove" type="button">Удалить</button>
+        <button class="cart-item__info-btn cart-item__info-btn--add" type="button">Добавить в избраноое</button>
+        <button class="cart-item__info-btn cart-item__info-btn--remove" type="button">Удалить</button>
       </div>
     </div>
   </div>
   <div class="cart-item__product">
     <div class="cart-item__product-price cart-item__product-price--actual">48 900 BYN</div>
     <div class="cart-item__product-price cart-item__product-price--old">97 800 BYN</div>
-    <div class="cart-item__product-counter">
-      <button class="cart-item__product-counterDecrement" data-cart="decrement" type="button">
-        <svg class="cart-item__product-icon">
+    <div class="cart-counter">
+      <button class="cart-counter__btn" data-cart="decrement" type="button">
+        <svg class="cart-counter__icon">
           <use href="images/icons/icons.svg#decrement" />
         </svg>
       </button>
-      <input class="cart-item__product-counterInput" type="text" value="1" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onFocus="this.select()" maxlength="3" data-cart="counter">
-      <button class="cart-item__product-counterIncrement" data-cart="increment" type="button">
-        <svg class="cart-item__product-icon">
+      <input class="cart-counter__input" type="text" value="1" data-cart="counter">
+      <button class="cart-counter__btn" data-cart="increment" type="button">
+        <svg class="cart-counter__icon">
           <use href="images/icons/icons.svg#increment" />
         </svg>
       </button>
@@ -1162,25 +1163,25 @@
       <img src="images/content//cart/item-1.jpg" alt="cart-item-image">
     </div>
     <div class="cart-item__info">
-      <h6 class="cart-item__info-title">Анатомический матрас Askona Benefit</h6>
+      <a href="card.html" class="cart-item__info-title">Анатомический матрас Askona Benefit</a>
       <div class="cart-item__info-buttons">
-        <button class="cart-item__info-buttonsItem cart-item__info-buttonsItem--add" type="button">Добавить в избраноое</button>
-        <button class="cart-item__info-buttonsItem cart-item__info-buttonsItem--remove" type="button">Удалить</button>
+        <button class="cart-item__info-btn cart-item__info-btn--add" type="button">Добавить в избраноое</button>
+        <button class="cart-item__info-btn cart-item__info-btn--remove" type="button">Удалить</button>
       </div>
     </div>
   </div>
   <div class="cart-item__product">
     <div class="cart-item__product-price cart-item__product-price--actual">48 900 BYN</div>
     <div class="cart-item__product-price cart-item__product-price--old">97 800 BYN</div>
-    <div class="cart-item__product-counter">
-      <button class="cart-item__product-counterDecrement" data-cart="decrement" type="button">
-        <svg class="cart-item__product-icon">
+    <div class="cart-counter">
+      <button class="cart-counter__btn" data-cart="decrement" type="button">
+        <svg class="cart-counter__icon">
           <use href="images/icons/icons.svg#decrement" />
         </svg>
       </button>
-      <input class="cart-item__product-counterInput" type="text" value="1" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onFocus="this.select()" maxlength="3" data-cart="counter">
-      <button class="cart-item__product-counterIncrement" data-cart="increment" type="button">
-        <svg class="cart-item__product-icon">
+      <input class="cart-counter__input" type="text" value="1" data-cart="counter">
+      <button class="cart-counter__btn" data-cart="increment" type="button">
+        <svg class="cart-counter__icon">
           <use href="images/icons/icons.svg#increment" />
         </svg>
       </button>
@@ -1193,25 +1194,25 @@
       <img src="images/content//cart/item-2.jpg" alt="cart-item-image">
     </div>
     <div class="cart-item__info">
-      <h6 class="cart-item__info-title">Анатомический матрас Askona Benefit</h6>
+      <a href="card.html" class="cart-item__info-title">Анатомический матрас Askona Benefit</a>
       <div class="cart-item__info-buttons">
-        <button class="cart-item__info-buttonsItem cart-item__info-buttonsItem--add" type="button">Добавить в избраноое</button>
-        <button class="cart-item__info-buttonsItem cart-item__info-buttonsItem--remove" type="button">Удалить</button>
+        <button class="cart-item__info-btn cart-item__info-btn--add" type="button">Добавить в избраноое</button>
+        <button class="cart-item__info-btn cart-item__info-btn--remove" type="button">Удалить</button>
       </div>
     </div>
   </div>
   <div class="cart-item__product">
     <div class="cart-item__product-price cart-item__product-price--actual">48 900 BYN</div>
     <div class="cart-item__product-price cart-item__product-price--old">97 800 BYN</div>
-    <div class="cart-item__product-counter">
-      <button class="cart-item__product-counterDecrement" data-cart="decrement" type="button">
-        <svg class="cart-item__product-icon">
+    <div class="cart-counter">
+      <button class="cart-counter__btn" data-cart="decrement" type="button">
+        <svg class="cart-counter__icon">
           <use href="images/icons/icons.svg#decrement" />
         </svg>
       </button>
-      <input class="cart-item__product-counterInput" type="text" value="1" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onFocus="this.select()" maxlength="3" data-cart="counter">
-      <button class="cart-item__product-counterIncrement" data-cart="increment" type="button">
-        <svg class="cart-item__product-icon">
+      <input class="cart-counter__input" type="text" value="1" data-cart="counter">
+      <button class="cart-counter__btn" data-cart="increment" type="button">
+        <svg class="cart-counter__icon">
           <use href="images/icons/icons.svg#increment" />
         </svg>
       </button>
@@ -1224,25 +1225,25 @@
       <img src="images/content//cart/item-3.jpg" alt="cart-item-image">
     </div>
     <div class="cart-item__info">
-      <h6 class="cart-item__info-title">Анатомический матрас Askona Benefit</h6>
+      <a href="card.html" class="cart-item__info-title">Анатомический матрас Askona Benefit</a>
       <div class="cart-item__info-buttons">
-        <button class="cart-item__info-buttonsItem cart-item__info-buttonsItem--add" type="button">Добавить в избраноое</button>
-        <button class="cart-item__info-buttonsItem cart-item__info-buttonsItem--remove" type="button">Удалить</button>
+        <button class="cart-item__info-btn cart-item__info-btn--add" type="button">Добавить в избраноое</button>
+        <button class="cart-item__info-btn cart-item__info-btn--remove" type="button">Удалить</button>
       </div>
     </div>
   </div>
   <div class="cart-item__product">
     <div class="cart-item__product-price cart-item__product-price--actual">48 900 BYN</div>
     <div class="cart-item__product-price cart-item__product-price--old">97 800 BYN</div>
-    <div class="cart-item__product-counter">
-      <button class="cart-item__product-counterDecrement" data-cart="decrement" type="button">
-        <svg class="cart-item__product-icon">
+    <div class="cart-counter">
+      <button class="cart-counter__btn" data-cart="decrement" type="button">
+        <svg class="cart-counter__icon">
           <use href="images/icons/icons.svg#decrement" />
         </svg>
       </button>
-      <input class="cart-item__product-counterInput" type="text" value="1" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onFocus="this.select()" maxlength="3" data-cart="counter">
-      <button class="cart-item__product-counterIncrement" data-cart="increment" type="button">
-        <svg class="cart-item__product-icon">
+      <input class="cart-counter__input" type="text" value="1" data-cart="counter">
+      <button class="cart-counter__btn" data-cart="increment" type="button">
+        <svg class="cart-counter__icon">
           <use href="images/icons/icons.svg#increment" />
         </svg>
       </button>
@@ -1250,25 +1251,25 @@
   </div>
 </div>
       </div>
-      <div class="cart__total">
-        <div class="cart__total-head">
-          <div class="cart__total-head__title">Итого:</div>
-          <div class="cart__total-head__price">127 BYN</div>
+      <div class="cart-total">
+        <div class="cart-total__header">
+          <div class="cart-total__title">Итого:</div>
+          <div class="cart-total__price">127 BYN</div>
         </div>
-        <p class="cart__total-description">
+        <p class="cart-total__description">
           <svg class="cart-item__product-icon">
             <use href="images/icons/icons.svg#total" />
           </svg>
           Будет начисленно <span>+ 289</span> за этот заказ
         </p>
-        <div class="cart__total-buttons">
-          <button class="cart__total-buttonsBuy cart__total-buttonsBuy--white btn btn--accent" type="button">Купить в 1 клик</button>
-          <button class="cart__total-buttonsBuy btn btn--accent" type="button">Оформить заказ</button>
+        <div class="cart-total__buttons">
+          <button class="cart-total__btn btn btn--white btn--100" type="button">Купить в 1 клик</button>
+          <a class="cart-total__btn btn btn--accent btn--100" href="order.html">Оформить заказ</a>
         </div>
       </div>
-      <div class="cart__more splide" id="cart-more-slider">
-        <div class="cart__more-head">
-          <div class="cart__more-title">С этим товаром покупают</div>
+      <div class="cart-more splide" id="cart-more-slider">
+        <div class="cart-more__header">
+          <div class="cart-more__title">С этим товаром покупают</div>
           <div class="splide__arrows">
             <button class="splide__arrow splide__arrow--prev" type="button">
               <svg>
@@ -1284,17 +1285,17 @@
         </div>
         <div class="splide__track">
           <div class="splide__list">
-            <div class="cart__more-item splide__slide">
-              <div class="cart__more-image">
+            <div class="cart-more__item splide__slide">
+              <div class="cart-more__image">
                 <img src="images/content/cart/cart-more-1.jpg" alt="cart-image">
               </div>
-              <a href="#" class="product-card__title">Анатомический матрас</a>
+              <a href="card.html" class="product-card__title">Анатомический матрас</a>
               <div class="product-card__price">
                 от
                 <span class="product-card__price--actual">48 900 BYN</span>
                 <span class="product-card__price--old">97 800 BYN</span>
               </div>
-              <div class="product-card__colors">
+              <div class="product-card__colors product-card__colors--sm">
                 <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
                 <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
                 <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
@@ -1304,17 +1305,17 @@
                 <span class="product-card__colors-more">+ 12</span>
               </div>
             </div>
-            <div class="cart__more-item splide__slide">
-              <div class="cart__more-image">
+            <div class="cart-more__item splide__slide">
+              <div class="cart-more__image">
                 <img src="images/content/cart/cart-more-2.jpg" alt="cart-image">
               </div>
-              <a href="#" class="product-card__title">Анатомический матрас</a>
+              <a href="card.html" class="product-card__title">Анатомический матрас</a>
               <div class="product-card__price">
                 от
                 <span class="product-card__price--actual">48 900 BYN</span>
                 <span class="product-card__price--old">97 800 BYN</span>
               </div>
-              <div class="product-card__colors">
+              <div class="product-card__colors product-card__colors--sm">
                 <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
                 <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
                 <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
@@ -1324,17 +1325,17 @@
                 <span class="product-card__colors-more">+ 12</span>
               </div>
             </div>
-            <div class="cart__more-item splide__slide">
-              <div class="cart__more-image">
+            <div class="cart-more__item splide__slide">
+              <div class="cart-more__image">
                 <img src="images/content/cart/cart-more-1.jpg" alt="cart-image">
               </div>
-              <a href="#" class="product-card__title">Анатомический матрас</a>
+              <a href="card.html" class="product-card__title">Анатомический матрас</a>
               <div class="product-card__price">
                 от
                 <span class="product-card__price--actual">48 900 BYN</span>
                 <span class="product-card__price--old">97 800 BYN</span>
               </div>
-              <div class="product-card__colors">
+              <div class="product-card__colors product-card__colors--sm">
                 <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
                 <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
                 <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
@@ -1344,17 +1345,17 @@
                 <span class="product-card__colors-more">+ 12</span>
               </div>
             </div>
-            <div class="cart__more-item splide__slide">
-              <div class="cart__more-image">
+            <div class="cart-more__item splide__slide">
+              <div class="cart-more__image">
                 <img src="images/content/cart/cart-more-2.jpg" alt="cart-image">
               </div>
-              <a href="#" class="product-card__title">Анатомический матрас</a>
+              <a href="card.html" class="product-card__title">Анатомический матрас</a>
               <div class="product-card__price">
                 от
                 <span class="product-card__price--actual">48 900 BYN</span>
                 <span class="product-card__price--old">97 800 BYN</span>
               </div>
-              <div class="product-card__colors">
+              <div class="product-card__colors product-card__colors--sm">
                 <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
                 <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
                 <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
@@ -1430,25 +1431,13 @@
         <img src="images/content/sale-slider/sale-slide-3.jpg" alt="slide image">
       </li>
       <li class="sale-slider__item splide__slide">
-        <img src="images/content/sale-slider/sale-slide-1.jpg" alt="slide image">
-      </li>
-      <li class="sale-slider__item splide__slide">
-        <img src="images/content/sale-slider/sale-slide-3.jpg" alt="slide image">
-      </li>
-      <li class="sale-slider__item splide__slide">
         <img src="images/content/sale-slider/sale-slide-6.jpg" alt="slide image">
       </li>
       <li class="sale-slider__item splide__slide">
         <img src="images/content/sale-slider/sale-slide-1.jpg" alt="slide image">
-      </li>
-      <li class="sale-slider__item splide__slide">
-        <img src="images/content/sale-slider/sale-slide-3.jpg" alt="slide image">
       </li>
       <li class="sale-slider__item splide__slide">
         <img src="images/content/sale-slider/sale-slide-2.jpg" alt="slide image">
-      </li>
-      <li class="sale-slider__item splide__slide">
-        <img src="images/content/sale-slider/sale-slide-6.jpg" alt="slide image">
       </li>
     </ul>
   </div>
@@ -1480,6 +1469,10 @@
             <img class="category-slider__image" src="images/content/category-slider/category-2.png" alt="category-icon">
             <h6 class="category-slider__title">Подушки</h6>
           </a>
+          <a href="#" class="category-slider__link category-slider__link--add">
+            <img class="category-slider__image" src="images/content/category-slider/category-9.png" alt="category-icon">
+            <h6 class="category-slider__title">Пуфы</h6>
+          </a>
         </div>
         <div class="splide__slide-box">
           <a href="#" class="category-slider__link">
@@ -1493,6 +1486,10 @@
           <a href="#" class="category-slider__link">
             <img class="category-slider__image" src="images/content/category-slider/category-6.png" alt="category-icon">
             <h6 class="category-slider__title">Мебель</h6>
+          </a>
+          <a href="#" class="category-slider__link category-slider__link--add">
+            <img class="category-slider__image" src="images/content/category-slider/category-10.png" alt="category-icon">
+            <h6 class="category-slider__title">Пледы</h6>
           </a>
         </div>
       </li>
@@ -1510,6 +1507,10 @@
             <img class="category-slider__image" src="images/content/category-slider/category-9.png" alt="category-icon">
             <h6 class="category-slider__title">Пуфы</h6>
           </a>
+          <a href="#" class="category-slider__link category-slider__link--add">
+            <img class="category-slider__image" src="images/content/category-slider/category-3.png" alt="category-icon">
+            <h6 class="category-slider__title">Кровати</h6>
+          </a>
         </div>
         <div class="splide__slide-box">
           <a href="#" class="category-slider__link">
@@ -1524,6 +1525,10 @@
             <img class="category-slider__image" src="images/content/category-slider/category-12.png" alt="category-icon">
             <h6 class="category-slider__title">Постельное белье
             </h6>
+          </a>
+          <a href="#" class="category-slider__link category-slider__link--add">
+            <img class="category-slider__image" src="images/content/category-slider/category-5.png" alt="category-icon">
+            <h6 class="category-slider__title">Диваны</h6>
           </a>
         </div>
       </li>
@@ -1584,6 +1589,13 @@
                         </ul>
                       </div>
                     </div>
+                    <div class="product-card__image-box">
+                      <div class="product-card__image-sale">
+                        <img src="images/icons/sale-lable.svg" alt="sale">
+                        <div class="product-card__image-saleInfo">-50%</div>
+                      </div>
+                      <div class="product-card__image-lable">Товар недели</div>
+                    </div>
                   </div>
                   <div class="product-card__container">
                     <a href="#" class="product-card__title">Анатомический матрас Askona</a>
@@ -1602,324 +1614,6 @@
                     </div>
                   </div>
                 </div>
-              </li>
-              <li class="product-slider__slide splide__slide">
-                <div class="product-card">
-  <div class="product-card__image">
-    <div class="product-card__mobileButtons">
-      <button class="product-card__comparision product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#comparision" />
-        </svg>
-      </button>
-      <button class="product-card__favourite product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#favourite" />
-        </svg>
-      </button>
-    </div>
-    <div class="splide splide__gallery">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="images/content/products/product-2.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-2.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-4.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="product-card__image-box">
-      <div class="product-card__image-sale">
-        <img src="images/icons/sale-lable.svg" alt="sale">
-        <div class="product-card__image-saleInfo">-50%</div>
-      </div>
-      <div class="product-card__image-lable">Товар недели</div>
-    </div>
-  </div>
-  <div class="product-card__container">
-    <a href="card.html" class="product-card__title">Анатомический матрас Askona <br>Benefit</a>
-    <div class="product-card__price">
-      от
-      <span class="product-card__price--actual">48 900 BYN</span>
-      <span class="product-card__price--old">97 800 BYN</span>
-    </div>
-    <div class="product-card__credit">
-      Рассрочка от <span class="product-card__credit--price">289.5 BYN</span>
-    </div>
-    
-    <div class="product-card__colors">
-      <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
-      <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
-      <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
-      <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
-      <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
-      <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
-      <span class="product-card__colors-more">+ 12</span>
-    </div>
-    
-    
-    <div class="product-card__addition">
-      <div class="product-card__addition-content">
-        <a href="#" class="product-card__more btn btn--accent btn--100">Подробнее</a>
-      </div>
-    </div>
-  </div>
-</div>
-              </li>
-              <li class="product-slider__slide splide__slide">
-                <div class="product-card">
-  <div class="product-card__image">
-    <div class="product-card__mobileButtons">
-      <button class="product-card__comparision product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#comparision" />
-        </svg>
-      </button>
-      <button class="product-card__favourite product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#favourite" />
-        </svg>
-      </button>
-    </div>
-    <div class="splide splide__gallery">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-2.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-4.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="product-card__image-box">
-      <div class="product-card__image-sale">
-        <img src="images/icons/sale-lable.svg" alt="sale">
-        <div class="product-card__image-saleInfo">-50%</div>
-      </div>
-      <div class="product-card__image-lable">Товар недели</div>
-    </div>
-  </div>
-  <div class="product-card__container">
-    <a href="card.html" class="product-card__title">Анатомический матрас Askona <br>Benefit</a>
-    <div class="product-card__price">
-      от
-      <span class="product-card__price--actual">48 900 BYN</span>
-      <span class="product-card__price--old">97 800 BYN</span>
-    </div>
-    <div class="product-card__credit">
-      Рассрочка от <span class="product-card__credit--price">289.5 BYN</span>
-    </div>
-    
-    
-    <div class="product-card__data">
-      <div class="product-card__data-item">
-        <svg class="product-card__data-icon">
-          <use href="images/icons/icons.svg#height" />
-        </svg>
-        <div class="product-card__data-itemBox">
-          <div class="product-card__data-itemTitle">Высота:</div>
-          <div class="product-card__data-itemInfo">19 см</div>
-        </div>
-      </div>
-      <div class="product-card__data-item">
-        <svg class="product-card__data-icon">
-          <use href="images/icons/icons.svg#weight" />
-        </svg>
-        <div class="product-card__data-itemBox">
-          <div class="product-card__data-itemTitle">Вес на спальное место:</div>
-          <div class="product-card__data-itemInfo">с выше 140 кг</div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="product-card__addition">
-      <div class="product-card__addition-content">
-        <a href="#" class="product-card__more btn btn--accent btn--100">Подробнее</a>
-      </div>
-    </div>
-  </div>
-</div>
-              </li>
-              <li class="product-slider__slide splide__slide">
-                <div class="product-card">
-  <div class="product-card__image">
-    <div class="product-card__mobileButtons">
-      <button class="product-card__comparision product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#comparision" />
-        </svg>
-      </button>
-      <button class="product-card__favourite product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#favourite" />
-        </svg>
-      </button>
-    </div>
-    <div class="splide splide__gallery">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="images/content/products/product-4.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-2.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-4.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="product-card__image-box">
-      <div class="product-card__image-sale">
-        <img src="images/icons/sale-lable.svg" alt="sale">
-        <div class="product-card__image-saleInfo">-50%</div>
-      </div>
-      <div class="product-card__image-lable">Товар недели</div>
-    </div>
-  </div>
-  <div class="product-card__container">
-    <a href="card.html" class="product-card__title">Анатомический матрас Askona <br>Benefit</a>
-    <div class="product-card__price">
-      от
-      <span class="product-card__price--actual">48 900 BYN</span>
-      <span class="product-card__price--old">97 800 BYN</span>
-    </div>
-    <div class="product-card__credit">
-      Рассрочка от <span class="product-card__credit--price">289.5 BYN</span>
-    </div>
-    
-    <div class="product-card__colors">
-      <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
-      <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
-      <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
-      <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
-      <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
-      <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
-      <span class="product-card__colors-more">+ 12</span>
-    </div>
-    
-    
-    <div class="product-card__addition">
-      <div class="product-card__addition-content">
-        <a href="#" class="product-card__more btn btn--accent btn--100">Подробнее</a>
-      </div>
-    </div>
-  </div>
-</div>
-              </li>
-              <li class="product-slider__slide splide__slide">
-                <div class="product-card">
-  <div class="product-card__image">
-    <div class="product-card__mobileButtons">
-      <button class="product-card__comparision product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#comparision" />
-        </svg>
-      </button>
-      <button class="product-card__favourite product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#favourite" />
-        </svg>
-      </button>
-    </div>
-    <div class="splide splide__gallery">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="images/content/products/product-1.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-2.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-4.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="product-card__image-box">
-      <div class="product-card__image-sale">
-        <img src="images/icons/sale-lable.svg" alt="sale">
-        <div class="product-card__image-saleInfo">-50%</div>
-      </div>
-      <div class="product-card__image-lable">Товар недели</div>
-    </div>
-  </div>
-  <div class="product-card__container">
-    <a href="card.html" class="product-card__title">Анатомический матрас Askona <br>Benefit</a>
-    <div class="product-card__price">
-      от
-      <span class="product-card__price--actual">48 900 BYN</span>
-      <span class="product-card__price--old">97 800 BYN</span>
-    </div>
-    <div class="product-card__credit">
-      Рассрочка от <span class="product-card__credit--price">289.5 BYN</span>
-    </div>
-    
-    
-    <div class="product-card__data">
-      <div class="product-card__data-item">
-        <svg class="product-card__data-icon">
-          <use href="images/icons/icons.svg#height" />
-        </svg>
-        <div class="product-card__data-itemBox">
-          <div class="product-card__data-itemTitle">Высота:</div>
-          <div class="product-card__data-itemInfo">19 см</div>
-        </div>
-      </div>
-      <div class="product-card__data-item">
-        <svg class="product-card__data-icon">
-          <use href="images/icons/icons.svg#weight" />
-        </svg>
-        <div class="product-card__data-itemBox">
-          <div class="product-card__data-itemTitle">Вес на спальное место:</div>
-          <div class="product-card__data-itemInfo">с выше 140 кг</div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="product-card__addition">
-      <div class="product-card__addition-content">
-        <a href="#" class="product-card__more btn btn--accent btn--100">Подробнее</a>
-      </div>
-    </div>
-  </div>
-</div>
               </li>
               <li class="product-slider__slide splide__slide">
                 <div class="product-card">
@@ -3131,324 +2825,6 @@
   </div>
 </div>
               </li>
-              <li class="product-slider__slide splide__slide">
-                <div class="product-card">
-  <div class="product-card__image">
-    <div class="product-card__mobileButtons">
-      <button class="product-card__comparision product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#comparision" />
-        </svg>
-      </button>
-      <button class="product-card__favourite product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#favourite" />
-        </svg>
-      </button>
-    </div>
-    <div class="splide splide__gallery">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="images/content/products/product-1.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-2.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-4.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="product-card__image-box">
-      <div class="product-card__image-sale">
-        <img src="images/icons/sale-lable.svg" alt="sale">
-        <div class="product-card__image-saleInfo">-50%</div>
-      </div>
-      <div class="product-card__image-lable">Товар недели</div>
-    </div>
-  </div>
-  <div class="product-card__container">
-    <a href="card.html" class="product-card__title">Анатомический матрас Askona <br>Benefit</a>
-    <div class="product-card__price">
-      от
-      <span class="product-card__price--actual">48 900 BYN</span>
-      <span class="product-card__price--old">97 800 BYN</span>
-    </div>
-    <div class="product-card__credit">
-      Рассрочка от <span class="product-card__credit--price">289.5 BYN</span>
-    </div>
-    
-    
-    <div class="product-card__data">
-      <div class="product-card__data-item">
-        <svg class="product-card__data-icon">
-          <use href="images/icons/icons.svg#height" />
-        </svg>
-        <div class="product-card__data-itemBox">
-          <div class="product-card__data-itemTitle">Высота:</div>
-          <div class="product-card__data-itemInfo">19 см</div>
-        </div>
-      </div>
-      <div class="product-card__data-item">
-        <svg class="product-card__data-icon">
-          <use href="images/icons/icons.svg#weight" />
-        </svg>
-        <div class="product-card__data-itemBox">
-          <div class="product-card__data-itemTitle">Вес на спальное место:</div>
-          <div class="product-card__data-itemInfo">с выше 140 кг</div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="product-card__addition">
-      <div class="product-card__addition-content">
-        <a href="#" class="product-card__more btn btn--accent btn--100">Подробнее</a>
-      </div>
-    </div>
-  </div>
-</div>
-              </li>
-              <li class="product-slider__slide splide__slide">
-                <div class="product-card">
-  <div class="product-card__image">
-    <div class="product-card__mobileButtons">
-      <button class="product-card__comparision product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#comparision" />
-        </svg>
-      </button>
-      <button class="product-card__favourite product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#favourite" />
-        </svg>
-      </button>
-    </div>
-    <div class="splide splide__gallery">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="images/content/products/product-2.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-2.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-4.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="product-card__image-box">
-      <div class="product-card__image-sale">
-        <img src="images/icons/sale-lable.svg" alt="sale">
-        <div class="product-card__image-saleInfo">-50%</div>
-      </div>
-      <div class="product-card__image-lable">Товар недели</div>
-    </div>
-  </div>
-  <div class="product-card__container">
-    <a href="card.html" class="product-card__title">Анатомический матрас Askona <br>Benefit</a>
-    <div class="product-card__price">
-      от
-      <span class="product-card__price--actual">48 900 BYN</span>
-      <span class="product-card__price--old">97 800 BYN</span>
-    </div>
-    <div class="product-card__credit">
-      Рассрочка от <span class="product-card__credit--price">289.5 BYN</span>
-    </div>
-    
-    <div class="product-card__colors">
-      <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
-      <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
-      <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
-      <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
-      <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
-      <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
-      <span class="product-card__colors-more">+ 12</span>
-    </div>
-    
-    
-    <div class="product-card__addition">
-      <div class="product-card__addition-content">
-        <a href="#" class="product-card__more btn btn--accent btn--100">Подробнее</a>
-      </div>
-    </div>
-  </div>
-</div>
-              </li>
-              <li class="product-slider__slide splide__slide">
-                <div class="product-card">
-  <div class="product-card__image">
-    <div class="product-card__mobileButtons">
-      <button class="product-card__comparision product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#comparision" />
-        </svg>
-      </button>
-      <button class="product-card__favourite product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#favourite" />
-        </svg>
-      </button>
-    </div>
-    <div class="splide splide__gallery">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-2.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-4.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="product-card__image-box">
-      <div class="product-card__image-sale">
-        <img src="images/icons/sale-lable.svg" alt="sale">
-        <div class="product-card__image-saleInfo">-50%</div>
-      </div>
-      <div class="product-card__image-lable">Товар недели</div>
-    </div>
-  </div>
-  <div class="product-card__container">
-    <a href="card.html" class="product-card__title">Анатомический матрас Askona <br>Benefit</a>
-    <div class="product-card__price">
-      от
-      <span class="product-card__price--actual">48 900 BYN</span>
-      <span class="product-card__price--old">97 800 BYN</span>
-    </div>
-    <div class="product-card__credit">
-      Рассрочка от <span class="product-card__credit--price">289.5 BYN</span>
-    </div>
-    
-    
-    <div class="product-card__data">
-      <div class="product-card__data-item">
-        <svg class="product-card__data-icon">
-          <use href="images/icons/icons.svg#height" />
-        </svg>
-        <div class="product-card__data-itemBox">
-          <div class="product-card__data-itemTitle">Высота:</div>
-          <div class="product-card__data-itemInfo">19 см</div>
-        </div>
-      </div>
-      <div class="product-card__data-item">
-        <svg class="product-card__data-icon">
-          <use href="images/icons/icons.svg#weight" />
-        </svg>
-        <div class="product-card__data-itemBox">
-          <div class="product-card__data-itemTitle">Вес на спальное место:</div>
-          <div class="product-card__data-itemInfo">с выше 140 кг</div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="product-card__addition">
-      <div class="product-card__addition-content">
-        <a href="#" class="product-card__more btn btn--accent btn--100">Подробнее</a>
-      </div>
-    </div>
-  </div>
-</div>
-              </li>
-              <li class="product-slider__slide splide__slide">
-                <div class="product-card">
-  <div class="product-card__image">
-    <div class="product-card__mobileButtons">
-      <button class="product-card__comparision product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#comparision" />
-        </svg>
-      </button>
-      <button class="product-card__favourite product-card__mobileButtons-button" type="button">
-        <svg class="product-card__icon">
-          <use href="images/icons/icons.svg#favourite" />
-        </svg>
-      </button>
-    </div>
-    <div class="splide splide__gallery">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="images/content/products/product-4.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-2.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-4.jpg" alt="product-image">
-          </li>
-          <li class="splide__slide">
-            <img src="images/content/products/product-3.jpg" alt="product-image">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="product-card__image-box">
-      <div class="product-card__image-sale">
-        <img src="images/icons/sale-lable.svg" alt="sale">
-        <div class="product-card__image-saleInfo">-50%</div>
-      </div>
-      <div class="product-card__image-lable">Товар недели</div>
-    </div>
-  </div>
-  <div class="product-card__container">
-    <a href="card.html" class="product-card__title">Анатомический матрас Askona <br>Benefit</a>
-    <div class="product-card__price">
-      от
-      <span class="product-card__price--actual">48 900 BYN</span>
-      <span class="product-card__price--old">97 800 BYN</span>
-    </div>
-    <div class="product-card__credit">
-      Рассрочка от <span class="product-card__credit--price">289.5 BYN</span>
-    </div>
-    
-    <div class="product-card__colors">
-      <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
-      <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
-      <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
-      <input class="product-card__colors-item" type="button" value="#553F34" style="background-color: #553F34;">
-      <input class="product-card__colors-item" type="button" value="#153142" style="background-color: #153142;">
-      <input class="product-card__colors-item" type="button" value="#7E8283" style="background-color: #7E8283;">
-      <span class="product-card__colors-more">+ 12</span>
-    </div>
-    
-    
-    <div class="product-card__addition">
-      <div class="product-card__addition-content">
-        <a href="#" class="product-card__more btn btn--accent btn--100">Подробнее</a>
-      </div>
-    </div>
-  </div>
-</div>
-              </li>
             </ul>
           </div>
         </div>
@@ -3745,13 +3121,17 @@
         <div class="footer__contact-phone">
           <a href="tel:+375447870750" class="footer__contact-phoneNumber">
             <img src="images/icons/media/phone-1.png" alt="Phone icon">
-            +375 (44) 787-07-50</a>
+            <span><b>+375 (44)</b>787-07-50</span>
+          </a>
           <a href="tel:+375292520396" class="footer__contact-phoneNumber">
             <img src="images/icons/media/phone-2.svg" alt="Phone icon">
-            +375 (29) 252-03-96</a>
+            <span><b>+375 (29)</b>252-03-96</span>
+
+          </a>
           <a href="tel:+375255003743" class="footer__contact-phoneNumber">
             <img src="images/icons/media/phone-3.svg" alt="Phone icon">
-            +375 (25) 500-37-43</a>
+            +375 (25) 500-37-43
+          </a>
         </div>
       </div>
     </div>
@@ -3799,7 +3179,7 @@
     </div>
   </div>
 </footer>
-  <script src="js/main.min.js?_v=20230214182459"></script>
+  <script src="js/main.min.js?_v=20230217164053"></script>
 </body>
 
 </html>
